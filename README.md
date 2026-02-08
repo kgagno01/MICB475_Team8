@@ -56,3 +56,47 @@ Meetings take place on Wednesdays, from 12pm to 12:45pm.
       * Maybe focusing solely on HIV infected individuals yield different results?
     * Unsure whether healthy individuals are included as a control in the dataset
 
+ ### Minutes from meeting
+* Notes on datasets
+  * Datasets sourced by YunYun are not suitable for project 2.
+  * The IBD Ryan dataset will be used.
+  * They were unable to find the metadata for the HIV and depression dataset so it is not very usable. You can’t see who has HIV vs. healthy in the data provided
+* Notes on the IBD Ryan dataset
+  * Data still contains the primers so we need to contact Hans for the code that would remove the primers.
+  * Good sample size
+  * Has already been used to solve the different parts of the colon and the smoking. We will answer the following question: “How does medication affect the microbiome of individuals with IBD, Crohn's disease or ulcerative colitis?”
+* Notes on Project 2
+  * Research question: How does medication affect the microbiome of individuals with IBD, Crohn's disease or ulcerative colitis?
+  * Analysis:
+    * Do the most prevalent medication(s), and combine all the others → want to isolate the effect of drug by itself (there are patients who are only on one drug so this should work)
+    * Might need to correct for biopsy location: making sure they are taken from the same location/part of the colon (2 different locations)
+    * Note that only one area is inflamed for different patients, so we could focus on biopsies taken from inflamed tissues and see how many samples we can keep per medication per biopsy location (could compare inflamed vs. healthy, combining Crohn's and Ulcerative colitis)
+    * 52 datapoints for inflamed tissues (all from different individuals). Should have enough to separate by location
+    * For medications use: no treatment, anti-TNF, mercaptopurine. Make sure to keep the healthy patients in there too
+ * Aims and workflow
+    * Variables 
+      * Inflamed (keep separated at the beginning for diversity metrics, then can combine them later for downstream analysis):
+      * UC (confounding variable)
+      * CD (confounding variable)
+      * Further separate by biopsy location (predictor)
+      * Treatment vs. non-treated (predictor)
+   * Aims:
+     1. Diversity metrics - will allow us to make some decisions about what comparison groups we can bin together
+     2. Core microbiome (venn diagram of shared vs unique microbes)
+     3. Indicator taxa (which signature microbes are indicative of a certain condition)
+     4. DESeq (can see the fluctuation of abundance/richness)
+     5. Functional analysis - piCrust2 (predict functional pathways. Determines what kind of functional bacteria are being selected for). Budget more time for this 
+* Proposal
+  * All we need to have is the data processed in Qiime. Do all processing on the server we were just sent. Have it processed (primer removed) for the proposal.
+  * After the proposal make the phyloseq object, share it around on Github before we start working on it.
+  * Start running analysis (steps 1-4) in parallel.
+* Action items
+  * Reach out to Hans for the code to process the dataset (Ahnaf)
+  * Process dataset on Qiime (Ahnaf)
+  * Delegate workflow steps between team members so we are ready to start analysis once proposal is submitted (everyone)
+  * For next meeting have any questions about proposal prepared (everyone)
+  * Ensure the work we plan to do will address our research question and how so (everyone)
+  * By next meeting do primary literature research so that we can start talking about the introduction (Keryanne, Evelyn, Hanna and YunYun)
+ 
+ 
+
