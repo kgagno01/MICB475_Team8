@@ -1,1 +1,26 @@
 
+ssh root@10.19.139.191
+ Password : Biome236
+# importing ryan data to data folder 
+
+ qiime tools import \
+  --type "SampleData[PairedEndSequencesWithQuality]" \
+  --input-format PairedEndFastqManifestPhred33V2 \
+  --input-path /datasets/project_2/human_ibd/ryan_manifest.tsv \
+  --output-path demux_seqs.qza
+
+# primer-trimming
+ qiime cutadapt trim-paired \
+  --i-demultiplexed-sequences demux_seqs.qza \
+  --p-front-f TCGTCGGCAGCGTCAGATGTGTATAAGAGACAGCCTACGGGNGGCWGCAG \
+  --p-front-r GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAGGACTACHVGGGTATCTAATCC \
+  --p-match-read-wildcards \
+  --p-match-adapter-wildcards \
+  --p-discard-untrimmed \
+  --o-trimmed-sequences demux_seqs_trimmed.qza \
+  --verbose > cutadapt-log-2.txt 
+
+# visualization : 
+ qiime demux summarize \
+    --i-data demux_seqs_trimmed.qza \
+    --o-visualization demux_seqs_trimmed.qzv
