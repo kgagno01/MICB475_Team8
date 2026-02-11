@@ -21,11 +21,11 @@ This project utilizes the Ryan Dataset to analyze the spatial and pharmaceutical
 
 | Analysis Task | Lead | Objective |
 | :--- | :--- | :--- |
-| **Diversity Metrics** | [Name] | Assess Alpha/Beta diversity for group binning. |
+| **Diversity Metrics** | Evelyn | Assess Alpha/Beta diversity for group binning. |
 | **Core Microbiome** | [Name] | Generate Venn diagrams for shared/unique taxa. |
 | **Indicator Taxa** | [Name] | Identify signatures for Anti-TNF vs. Mercaptopurine. |
 | **DESeq2** | [Name] | Differential abundance in inflamed vs. healthy tissue. |
-| **PICRUSt2** | [Name] | Functional pathway predictions (SCFA, barrier repair). |
+| **PICRUSt2** | [Name] | Functional pathway predictions (SCFA, barrier repair). | Note: set aside more time for this, >1 person may work do this part.
 
 
 
