@@ -26,9 +26,8 @@ This project utilizes the Ryan Dataset to analyze the spatial and pharmaceutical
 | **Indicator Taxa** | [Name] | Identify signatures for Anti-TNF vs. Mercaptopurine. |
 | **DESeq2** | [Name] | Differential abundance in inflamed vs. healthy tissue. |
 | **PICRUSt2** | [Name] | Functional pathway predictions (SCFA, barrier repair). | 
+
 Note: set aside more time for PICRUSt2. >1 person may work on this part.
-
-
 
 ## Experimental Design
 * **Conditions:** Crohn's Disease (CD), Ulcerative Colitis (UC), Healthy Control.
