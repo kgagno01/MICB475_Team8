@@ -59,3 +59,13 @@ This project utilizes the Ryan Dataset to analyze the spatial and pharmaceutical
 **Ryan et al. (2020). "Colonic microbiota is associated with inflammation and host epigenomic alterations in inflammatory bowel disease."**
 * **Key takeaway:** Establishes the link between mucosal microbiota composition and host epigenetic changes, providing the foundational dataset and biological context for this project.
 * **Link:** [https://doi.org/10.1038/s41467-020-14731-z](https://doi.org/10.1038/s41467-020-14731-z)
+
+### 5. Paracellular Passage of Medication
+**Nakai et al. (2023). "Intestinal Membrane Function in Inflammatory Bowel Disease."**
+* **Key takeaway:** Includes data on ulcerative colitis and Crohn’s disease using “gut-on-a-chip” model. UC patients in remission and IBS patients have reduced transepithelial electrical resistance and increased paracellular passage of IBD medications (intestinal cells become leaky when tissue is inflamed).
+* **Link:** [https://doi.org/10.3390/pharmaceutics16010029]
+
+### 6. Altered Inflamed Intestinal Mucosal Membranes
+**Dorofeyev et al. (2013). "Mucosal Barrier in Ulcerative Colitis and Crohn’s Disease."**
+* **Key takeaway:** Clinical study on 77 UC and CD patients. Patients with UC demonstrated low secretion of mucus on intestinal membrane. The most dramatic alteration in mucin expression was observed in severe cases of UC and CD. This mucosal membrane is important to the host innate immune response making these patients more susceptible to disease and infection.
+* **Link:** [https://doi.org/10.1155/2013/431231]
