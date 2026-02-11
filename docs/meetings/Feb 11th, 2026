@@ -45,12 +45,17 @@ This project utilizes the Ryan Dataset to analyze the spatial and pharmaceutical
 * **Key takeaway:** High non-response rates (40%) and secondary loss of response (23-46%) to Anti-TNFs necessitate the identification of microbial biomarkers for treatment success.
 * **Link:** [https://doi.org/10.3389/fmed.2021.765474](https://doi.org/10.3389/fmed.2021.765474)
 
-### 2. Spatial Biogeography of the Gut
+### 2. Mechanisms of Dysbiosis and Disease Progression
+**Shan et al. (2022). "The Gut Microbiome and Inflammatory Bowel Diseases."**
+* **Key takeaway:** Outlines a multi-stage model of IBD development where environmental triggers and genetic drivers lead to a loss of beneficial commensals and an emergence of pathobionts, ultimately resulting in a compromised mucosal barrier.
+* **Link:** [https://doi.org/10.1146/annurev-med-042320-021020](https://doi.org/10.1146/annurev-med-042320-021020)
+
+### 3. Spatial Biogeography of the Gut
 **Lavelle et al. (2015). "Spatial variation of the colonic microbiota in patients with ulcerative colitis and control volunteers."**
 * **Key takeaway:** Mucosal-associated microbiomes vary significantly by location (Caecum vs. Rectum). Justifies treating Biopsy Location as a predictor rather than pooling all IBD samples.
 * **Link:** [https://pmc.ncbi.nlm.nih.gov/articles/PMC4602252/](https://pmc.ncbi.nlm.nih.gov/articles/PMC4602252/)
 
-### 3. Medication-Microbiome Interactions
-**Ryan et al. (2022). "Interactions between Medications and the Gut Microbiome in Inflammatory Bowel Disease."**
-* **Key takeaway:** Medication accounts for more variance in the microbiome (3.5%) than disease subtype or geography. Provides the foundational justification for the project's novel question.
-* **Link:** [https://doi.org/10.3390/microorganisms10020473](https://doi.org/10.3390/microorganisms10020473)
+### 4. Microbiota, Inflammation, and Epigenomics
+**Ryan et al. (2020). "Colonic microbiota is associated with inflammation and host epigenomic alterations in inflammatory bowel disease."**
+* **Key takeaway:** Establishes the link between mucosal microbiota composition and host epigenetic changes, providing the foundational dataset and biological context for this project.
+* **Link:** [https://doi.org/10.1038/s41467-020-14731-z](https://doi.org/10.1038/s41467-020-14731-z)
