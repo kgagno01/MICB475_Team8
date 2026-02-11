@@ -10,12 +10,14 @@ This project utilizes the Ryan Dataset to analyze the spatial and pharmaceutical
 
 ## Current Status: Meeting Agenda & Action Items
 
-### 1. Data Processing Updates
-- [x] **Cutadapt Execution:** Completed by Ahnaf. Initial review of `cutadapt-log-2.txt` shows >99% read retention.
-- [ ] **Quality Review:** Team must upload `1a_demux_seqs-trimmed.qzv` to QIIME 2 View to finalize truncation lengths.
+## Data Processing Updates
+- [x] **Cutadapt Execution:** Completed by Ahnaf. Initial review of `cutadapt-log-2.txt` shows >99% read retention, confirm with Hans.
+- [x] **Quality Review:** Upload demux_seqs-trimmed.qzv` to QIIME 2 View to finalize truncation lengths.
 - [ ] **DADA2 Denoising:** Define `--p-trunc-len-f` and `--p-trunc-len-r` to generate the final feature table.
 
-### 2. Analysis (Parallel Tasks)
+<img width="1423" height="433" alt="Screenshot 2026-02-11 at 12 59 15 AM" src="https://github.com/user-attachments/assets/56d4c5e3-14f0-4735-a0a2-922f987749c7" />
+
+## Analysis (Parallel Tasks)
 
 | Analysis Task | Lead | Objective |
 | :--- | :--- | :--- |
@@ -23,7 +25,7 @@ This project utilizes the Ryan Dataset to analyze the spatial and pharmaceutical
 | **Core Microbiome** | [Name] | Generate Venn diagrams for shared/unique taxa. |
 | **Indicator Taxa** | [Name] | Identify signatures for Anti-TNF vs. Mercaptopurine. |
 | **DESeq2** | [Name] | Differential abundance in inflamed vs. healthy tissue. |
-| **PICRUSt2** | Hanna | Functional pathway predictions (SCFA, barrier repair). |
+| **PICRUSt2** | [Name] | Functional pathway predictions (SCFA, barrier repair). |
 
 
 
@@ -46,7 +48,7 @@ This project utilizes the Ryan Dataset to analyze the spatial and pharmaceutical
 ### 2. Spatial Biogeography of the Gut
 **Lavelle et al. (2015). "Spatial variation of the colonic microbiota in patients with ulcerative colitis and control volunteers."**
 * **Key takeaway:** Mucosal-associated microbiomes vary significantly by location (Caecum vs. Rectum). Justifies treating Biopsy Location as a predictor rather than pooling all IBD samples.
-* **Link:** [https://doi.org/10.1136/gutjnl-2015-309181](https://doi.org/10.1136/gutjnl-2015-309181)
+* **Link:** [https://pmc.ncbi.nlm.nih.gov/articles/PMC4602252/](https://pmc.ncbi.nlm.nih.gov/articles/PMC4602252/)
 
 ### 3. Medication-Microbiome Interactions
 **Ryan et al. (2022). "Interactions between Medications and the Gut Microbiome in Inflammatory Bowel Disease."**
