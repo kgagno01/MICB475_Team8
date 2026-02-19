@@ -8,8 +8,8 @@ Downloading :
 #start Screen and resume screen 
  screen -S Ahnaf (start)
  screen -r Ahnaf (resume)
-# importing ryan data to data folder 
 
+# importing ryan data to data folder 
  qiime tools import \
   --type "SampleData[PairedEndSequencesWithQuality]" \
   --input-format PairedEndFastqManifestPhred33V2 \
@@ -17,15 +17,15 @@ Downloading :
   --output-path demux_seqs.qza
 
 # primer-trimming
- qiime cutadapt trim-paired \
-  --i-demultiplexed-sequences demux_seqs.qza \
-  --p-front-f TCGTCGGCAGCGTCAGATGTGTATAAGAGACAGCCTACGGGNGGCWGCAG \
-  --p-front-r GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAGGACTACHVGGGTATCTAATCC \
-  --p-match-read-wildcards \
-  --p-match-adapter-wildcards \
-  --p-discard-untrimmed \
-  --o-trimmed-sequences demux_seqs_trimmed.qza \
-  --verbose > cutadapt-log-2.txt 
+	 qiime cutadapt trim-paired \
+	  --i-demultiplexed-sequences demux_seqs.qza \
+	  --p-front-f TCGTCGGCAGCGTCAGATGTGTATAAGAGACAGCCTACGGGNGGCWGCAG \
+	  --p-front-r GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAGGACTACHVGGGTATCTAATCC \
+	  --p-match-read-wildcards \
+	  --p-match-adapter-wildcards \
+	  --p-discard-untrimmed \
+	  --o-trimmed-sequences demux_seqs_trimmed.qza \
+	  --verbose > cutadapt-log-2.txt 
 
 # visualization : 
  qiime demux summarize \
@@ -33,15 +33,21 @@ Downloading :
     --o-visualization demux_seqs_trimmed.qzv
 
 # Running DADA2
-qiime dada2 denoise-paired \
-  --i-demultiplexed-seqs demux_seqs_trimmed.qza \
-  --p-trunc-len-f 200 \
-  --p-trunc-len-r 156 \
-  --o-table table.qza \
-  --o-representative-sequences rep-seqs.qza \
-  --o-denoising-stats denoising-stats.qza
+	qiime dada2 denoise-paired \
+	  --i-demultiplexed-seqs demux_seqs_trimmed.qza \
+	  --p-trunc-len-f 200 \
+	  --p-trunc-len-r 156 \
+	  --o-table table.qza \
+	  --o-representative-sequences rep-seqs.qza \
+	  --o-denoising-stats denoising-stats.qza
 
 # visuazlizing the file
-qiime metadata tabulate \
-  --m-input-file denoising-stats.qza \
-  --o-visualization denoising-stats.qzv
+	qiime metadata tabulate \
+	  --m-input-file denoising-stats.qza \
+	  --o-visualization denoising-stats.qzv
+
+# summarizing the feature table 
+	qiime feature-table summarize \
+	  --i-table table.qza \
+	  --o-visualization table.qzv \
+	  --m-sample-metadata-file /datasets/project_2/human_ibd/ryan_metadata.tsv 
