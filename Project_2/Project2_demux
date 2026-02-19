@@ -24,3 +24,17 @@ ssh root@10.19.139.191
  qiime demux summarize \
     --i-data demux_seqs_trimmed.qza \
     --o-visualization demux_seqs_trimmed.qzv
+
+# Running DADA2
+qiime dada2 denoise-paired \
+  --i-demultiplexed-seqs demux_seqs_trimmed.qza \
+  --p-trunc-len-f 200 \
+  --p-trunc-len-r 156 \
+  --o-table table.qza \
+  --o-representative-sequences rep-seqs.qza \
+  --o-denoising-stats denoising-stats.qza
+
+# visuazlizing the file
+qiime metadata tabulate \
+  --m-input-file denoising-stats.qza \
+  --o-visualization denoising-stats.qzv
