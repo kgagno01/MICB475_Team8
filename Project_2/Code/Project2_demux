@@ -35,8 +35,8 @@ Downloading :
 # Running DADA2
 	qiime dada2 denoise-paired \
 	  --i-demultiplexed-seqs demux_seqs_trimmed.qza \
-	  --p-trunc-len-f 200 \
-	  --p-trunc-len-r 156 \
+	  --p-trunc-len-f 220 \
+	  --p-trunc-len-r 220 \
 	  --o-table table.qza \
 	  --o-representative-sequences rep-seqs.qza \
 	  --o-denoising-stats denoising-stats.qza
@@ -51,3 +51,91 @@ Downloading :
 	  --i-table table.qza \
 	  --o-visualization table.qzv \
 	  --m-sample-metadata-file /datasets/project_2/human_ibd/ryan_metadata.tsv 
+
+qiime feature-classifier extract-reads \
+--i-sequences /datasets/classifiers/silva_ref_files/silva-138-99-seqs.qza \
+--p-f-primer CCTACGGGNGGCWGCAG \
+--p-r-primer GACTACHVGGGTATCTAATCC \
+--p-trunc-len 220 \
+--o-reads ref-seqs-trimmed.qza
+
+
+qiime feature-classifier fit-classifier-naive-bayes \ 
+	--i-reference-reads ref-seqs-trimmed.qza \ 
+	--i-reference-taxonomy /datasets/classifiers/silva_ref_files/silva-138-99-tax.qza \ 
+	--o-classifier classifier.qza
+
+
+qiime feature-classifier classify-sklearn \
+  --i-classifier classifier.qza \
+  --i-reads rep-seqs-final.qza \
+  --o-classification taxonomy.qza
+
+
+#Create Visualization
+qiime metadata tabulate \
+  --m-input-file taxonomy.qza \
+  --o-visualization taxonomy.qzv
+
+
+qiime taxa filter-table \
+  --i-table table.qza \
+  --i-taxonomy taxonomy.qza \
+  --p-exclude mitochondria,chloroplast \
+  --o-filtered-table table-no-mitochondria-no-chloroplast.qza
+
+
+qiime feature-table filter-features \
+  --i-table table-no-mitochondria-no-chloroplast.qza \
+  --p-min-frequency 5 \
+  --o-filtered-table table-feature-filtered.qza
+
+
+qiime feature-table filter-samples \
+  --i-table table-feature-filtered.qza \
+  --p-min-frequency 100 \
+  --o-filtered-table table-final.qza
+
+
+qiime feature-table summarize \
+  --i-table table-final.qza \
+  --o-visualization table-final.qzv \
+  --m-sample-metadata-file /datasets/project_2/human_ibd/ryan_metadata.tsv
+
+
+qiime feature-table filter-seqs \
+  --i-data rep-seqs.qza \
+  --i-table table-final.qza \
+  --o-filtered-data rep-seqs-final.qza
+
+qiime phylogeny align-to-tree-mafft-fasttree \
+  --i-sequences rep-seqs-final.qza \
+  --o-alignment aligned-rep-seqs.qza \
+  --o-masked-alignment masked-aligned-rep-seqs.qza \
+  --o-tree unrooted-tree.qza \
+  --o-rooted-tree rooted-tree-final.qza
+
+
+# Taxonomy barplots
+qiime taxa barplot \
+  --i-table table-final.qza \
+  --i-taxonomy taxonomy.qza \
+  --m-metadata-file /datasets/project_2/human_ibd/ryan_metadata.tsv \
+  --o-visualization taxa-bar-plots.qzv
+
+
+# Generate a tree for phylogenetic diversity analyses
+qiime phylogeny align-to-tree-mafft-fasttree \
+  --i-sequences rep-seqs.qza \
+  --o-alignment aligned-rep-seqs.qza \
+  --o-masked-alignment masked-aligned-rep-seqs.qza \
+  --o-tree unrooted-tree.qza \
+  --o-rooted-tree rooted-tree.qza
+
+
+qiime diversity alpha-rarefaction \
+  --i-table table-final.qza \
+  --i-phylogeny rooted-tree.qza \
+  --p-max-depth 10000 \
+  --m-metadata-file /datasets/project_2/human_ibd/ryan_metadata.tsv \
+  --o-visualization alpha-rarefaction.qzv
