@@ -15,7 +15,7 @@ This project utilizes the Ryan Dataset to analyze the spatial and pharmaceutical
 - [x] **Table Filtering:** removed mitochondria and chloroplast sequences. Features with total frequency below 5 and with fewer than 100 reads were removed. Leaves us with 2,733 unique features across 342 samples.
 - [x] **Rarefaction:** A sampling depth of 6000 was selected to optimise statistical power and data resolution. The majority of sample curves reach a plateau at this sampling depth (as observed in Figure 1). This sampling depth retains 1,512,000 (46.79%) total sequences across 252 (73.68%) samples.
 
-<img width="1423" height="433" alt="Figure 1" src="https://github.com/MICB475_Team8/rarefaction.png" />
+<img src="https://raw.githubusercontent.com/kgagno01/MICB475_Team8/85e997b46d45c9e0af594e43a6396af34466adf4/rarefaction.png" width="800" alt="Figure 1">
 
 ***Figure 1. Alpha rarefaction analysis of the 2,733 rescued features.** Rarefaction curves were generated in QIIME 2 using the final feature table to evaluate the relationship between sequencing depth and ASVs. Each line represents a distinct sample, with a maximum sequencing depth of 10,000. The sampling depth for diversity analysis is set to 6,000, as indicated by the red dotted line.*
 
