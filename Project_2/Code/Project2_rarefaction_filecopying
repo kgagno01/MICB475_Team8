@@ -1,0 +1,46 @@
+# Create the rarefied table
+qiime feature-table rarefy \
+  --i-table table-final.qza \
+  --p-sampling-depth 6000 \
+  --o-rarefied-table table-rarefied-6000.qza
+
+# Visualized the rarefied table to check it
+qiime feature-table summarize \
+  --i-table table-rarefied-6000.qza \
+  --o-visualization table-rarefied-6000.qzv \
+  --m-sample-metadata-file /datasets/project_2/human_ibd/ryan_metadata.tsv
+
+# Made a new directory in the data folder for exporting files
+mkdir ryan_exports
+
+# Export files needed to make the phyloseq object into a file on local computer to be opened later in R (ASV table, metadata, taxonomy, phylogenetic tree)
+
+qiime tools export \
+  --input-path ../MICB475_Team8/table-rarefied-6000.qza \
+  --output-path exported-feature-table
+
+qiime tools export \
+  --input-path ../MICB475_Team8/taxonomy.qza \
+  --output-path exported-taxonomy
+
+qiime tools export \
+  --input-path ../MICB475_Team8/rooted-tree.qza \
+  --output-path exported-tree
+
+qiime tools export \
+  --input-path ../MICB475_Team8/taxonomy.qza \
+  --output-path exported-taxonomy
+
+cp ../../datasets/project_2/human_ibd/ryan_metadata.tsv .
+
+# Convert table to be human readable (working in the exported-feature-table directory)
+biom convert -i feature-table.biom --to-tsv -o feature-table.txt
+
+# What I now have saved in the ryan_exports directory
+# exported-feature-table/feature-table.biom and /feature-table.txt
+# exported-taxonomy/taxonomy.tsv
+# exported-tree/tree.nwk
+# ryan_metadata.tsv
+
+# Transferred this directory to my local computer before moving into R
+scp -r root@10.19.139.191:/data/ryan_exports Downloads/MICB475_Project2
