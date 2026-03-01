@@ -44,3 +44,4 @@ biom convert -i feature-table.biom --to-tsv -o feature-table.txt
 
 # Transferred this directory to my local computer before moving into R
 scp -r root@10.19.139.191:/data/ryan_exports Downloads/MICB475_Project2
+ 
