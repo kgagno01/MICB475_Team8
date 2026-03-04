@@ -6,6 +6,9 @@
 ## Project Overview
 This project utilizes the Ryan Dataset to analyze the spatial and pharmaceutical influences on the gut microbiome. We aim to isolate the effects of specific treatments (Anti-TNF and Mercaptopurine) compared to non-treated individuals and healthy controls, while accounting for the biopsy location as a key predictor.
 
+## Data Processing Updates
+- [ ] 
+
 ## Analysis (Parallel Tasks)
 
 | Analysis Task | Lead | Objective |
@@ -17,3 +20,5 @@ This project utilizes the Ryan Dataset to analyze the spatial and pharmaceutical
 | **PICRUSt2** | [Kéryanne] | Functional pathway predictions (SCFA, barrier repair). | 
 
 ## Current Status: Meeting Agenda & Action Items
+Review feedback from paper proposal and submit a revision by ____
+Complete Core Microbiome analysis for next week with brief description of results
