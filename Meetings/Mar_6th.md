@@ -6,6 +6,14 @@
 ## Project Overview
 This project utilizes the Ryan Dataset to analyze the spatial and pharmaceutical influences on the gut microbiome. We aim to isolate the effects of specific treatments (Anti-TNF and Mercaptopurine) compared to non-treated individuals and healthy controls, while accounting for the biopsy location as a key predictor.
 
+## Analysis (Parallel Tasks)
 
+| Analysis Task | Lead | Objective |
+| :--- | :--- | :--- |
+| **Diversity Metrics** | Evelyn | Assess Alpha/Beta diversity for group binning. |
+| **Core Microbiome** | [YunYun] | Generate Venn diagrams for shared/unique taxa. |
+| **Indicator Taxa** | [Ahnaf] | Identify signatures for Anti-TNF vs. Mercaptopurine. |
+| **DESeq2** | [Hannah] | Differential abundance in inflamed vs. healthy tissue. |
+| **PICRUSt2** | [Kéryanne] | Functional pathway predictions (SCFA, barrier repair). | 
 
 ## Current Status: Meeting Agenda & Action Items
