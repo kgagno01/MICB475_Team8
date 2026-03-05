@@ -27,7 +27,7 @@ Complete Core Microbiome analysis for next week with brief description of result
 
 
 Fix research proposal:
-*Fix citations
-*Fix title
-*Fix Aim 1
-*Fix wording of introduction
+* Fix citations
+* Fix title
+* Fix Aim 1
+* Fix wording of introduction
