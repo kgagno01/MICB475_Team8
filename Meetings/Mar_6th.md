@@ -20,5 +20,10 @@ This project utilizes the Ryan Dataset to analyze the spatial and pharmaceutical
 | **PICRUSt2** | [Kéryanne] | Functional pathway predictions (SCFA, barrier repair). | 
 
 ## Current Status: Meeting Agenda & Action Items
-Review feedback from paper proposal and submit a revision by
-Complete Core Microbiome analysis for next week with brief description of results
+Review feedback from paper proposal and submit a revision by.
+Complete Core Microbiome analysis for next week with brief description of results.
+Fix research proposal:
+*Fix citations
+*Fix title
+*Fix Aim 1
+*Fix wording of introduction
