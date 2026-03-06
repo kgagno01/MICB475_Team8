@@ -407,7 +407,7 @@ adonis2(unifrac_inf ~ Medications, data=dat_inf)
 
 # p-value of 0.002, statistically significant. There is a significant difference in the presence/absence of specific taxa between medication groups.
 
-# Re-plot the Bray-Curtis plot but include ellipses to see significant groups
+# Re-plot the Unifrac plot but include ellipses to see significant groups
 ellip_pcoa_unifrac_inf <- plot_ordination(ryan_inflamed, pcoa_unifrac_inf, color = "Medications") +
   labs(col = "Medication")+
   stat_ellipse(type = "norm")
@@ -423,7 +423,7 @@ adonis2(wunifrac_inf ~ Medications, data=dat_inf)
 
 # p-value of 0.006, statistically significant. Significant difference in the relative abundance of taxa between medication groups.
 
-# Re-plot the Bray-Curtis plot but include ellipses to see significant groups
+# Re-plot the Weighted Unifrac plot but include ellipses to see significant groups
 ellip_pcoa_wunifrac_inf <- plot_ordination(ryan_inflamed, pcoa_wunifrac_inf, color = "Medications") +
   labs(col = "Medication")+
   stat_ellipse(type = "norm")
