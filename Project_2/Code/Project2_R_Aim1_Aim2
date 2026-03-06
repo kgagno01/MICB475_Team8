@@ -4,6 +4,7 @@ library(phyloseq)
 library(ape)
 library(tidyverse)
 library(vegan)
+library(picante)
 
 # Loading in your data
 meta <- read_delim(file = "ryan_metadata.tsv")
