@@ -456,7 +456,7 @@ ggsave("plot_pcoa_bc_ninf.png"
 # Unweighted Unifrac Distance
 unifrac_ninf <- distance(ryan_noninflamed, method="unifrac")
 
-pcoa_unifrac_ninf <- ordinate(ryan_noninflamed, method="PCoA", distance=unifrac)
+pcoa_unifrac_ninf <- ordinate(ryan_noninflamed, method="PCoA", distance=unifrac_ninf)
 
 gg_pcoa_unifrac_ninf <- plot_ordination(ryan_noninflamed, pcoa_unifrac_ninf, color = "Medications") +
   labs(col = "Medication")
@@ -471,7 +471,7 @@ ggsave("plot_pcoa_unifrac_ninf.png"
 # Weighted Unifrac Distance
 wunifrac_ninf <- distance(ryan_noninflamed, method="wunifrac")
 
-pcoa_wunifrac_ninf <- ordinate(ryan_noninflamed, method="PCoA", distance=wunifrac)
+pcoa_wunifrac_ninf <- ordinate(ryan_noninflamed, method="PCoA", distance=wunifrac_ninf)
 
 gg_pcoa_wunifrac_ninf <- plot_ordination(ryan_noninflamed, pcoa_wunifrac_ninf, color = "Medications") +
   labs(col = "Medication")
