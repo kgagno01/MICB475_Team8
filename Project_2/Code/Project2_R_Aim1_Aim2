@@ -334,3 +334,174 @@ TukeyHSD(anova_pd_vs_med_log)
 # statistically significant p-value between medication groups No-AntiTNF (0.04223) in noninflammed tissues
 
 ##############################################################################################################
+
+#### Beta diversity - Inflamed #####
+## Bray Curtis
+
+bc_inf <- distance(ryan_inflamed, method="bray")
+
+pcoa_bc_inf <- ordinate(ryan_inflamed, method="PCoA", distance=bc_inf)
+
+gg_pcoa_bc_inf <- plot_ordination(ryan_inflamed, pcoa_bc_inf, color = "Medications") +
+  labs(col = "Medication")
+gg_pcoa_bc_inf
+
+# No clustering of specific medication groups observed. Most samples concentrated towards the left of the plot. PC1(17.4%), PC2(8.5%), 25.9% total variation.
+
+ggsave("plot_pcoa_bc_inf.png"
+       , gg_pcoa_bc_inf
+       , height=4, width=10)
+
+# Unweighted Unifrac Distance
+unifrac_inf <- distance(ryan_inflamed, method="unifrac")
+
+pcoa_unifrac_inf <- ordinate(ryan_inflamed, method="PCoA", distance=unifrac_inf)
+
+gg_pcoa_unifrac_inf <- plot_ordination(ryan_inflamed, pcoa_unifrac_inf, color = "Medications") +
+  labs(col = "Medication")
+gg_pcoa_unifrac_inf
+
+# No clustering of specific medications observed, however, general clustering of all groups to the left of the plot. There will likely be no significant difference in the presence/absence of taxa. PC1(35.9%), PC2(10.1%), 46% total variation.
+
+ggsave("plot_pcoa_unifrac_inf.png"
+       , gg_pcoa_unifrac_inf
+       , height=4, width=10)
+
+# Weighted Unifrac Distance
+wunifrac_inf <- distance(ryan_inflamed, method="wunifrac")
+
+pcoa_wunifrac_inf <- ordinate(ryan_inflamed, method="PCoA", distance=wunifrac_inf)
+
+gg_pcoa_wunifrac_inf <- plot_ordination(ryan_inflamed, pcoa_wunifrac_inf, color = "Medications") +
+  labs(col = "Medication")
+gg_pcoa_wunifrac_inf
+
+# arched clustering of specific medication groups observed, with most samples concentrated at the left of the plot. Since a small number of abundant lineages differ strongly between samples. Meaning that one category/column/axis of variation (ie. smoking, subject, inflammation) is the main contributor of phylogenetic abundance difference. PC1(98.1%), PC2(1.6%), 99.7% total variation.
+
+ggsave("plot_pcoa_wunifrac_inf.png"
+       , gg_pcoa_wunifrac_inf
+       , height=4, width=10)
+
+### PERMANOVA Test
+## to determine whether the overall microbial community composition differs with statistical significance between Medication groups
+
+## Bray-Curtis
+dat_inf <- data.frame(sample_data(ryan_inflamed))
+adonis2(bc_inf ~ Medications, data = dat_inf)
+
+# p-value of 0.001, statistically significant. Community composition differs significantly between medication groups.
+
+# Re-plot the Bray-Curtis plot but include ellipses to see significant groups
+ellip_pcoa_bc_inf <- plot_ordination(ryan_inflamed, pcoa_bc_inf, color = "Medications") +
+  labs(col = "Medication")+
+  stat_ellipse(type = "norm")
+ellip_pcoa_bc_inf
+
+ggsave("ellip_plot_bc_inf.png"
+       , ellip_pcoa_bc_inf
+       , height=4, width=10)
+# Most ellipses are very large and don't show significant clustering. The most concentrated group is Mercaptopurine+corticosteroids.
+
+## Unweighted Unifrac
+adonis2(unifrac_inf ~ Medications, data=dat_inf)
+
+# p-value of 0.002, statistically significant. There is a significant difference in the presence/absence of specific taxa between medication groups.
+
+# Re-plot the Bray-Curtis plot but include ellipses to see significant groups
+ellip_pcoa_unifrac_inf <- plot_ordination(ryan_inflamed, pcoa_unifrac_inf, color = "Medications") +
+  labs(col = "Medication")+
+  stat_ellipse(type = "norm")
+ellip_pcoa_unifrac_inf
+
+ggsave("ellip_plot_unifrac_inf.png"
+       , ellip_pcoa_unifrac_inf
+       , height=4, width=10)
+# Most ellipses are very large and don't show significant clustering. However, Mercaptopurine, Mercaptopurine+corticosteroids, Mesalamine+mercaptopurine, and Mesalamine+mercaptopurine+anti-TNF show tight clustering. Overall, any medication group that contains Mercaptopurine shows significant difference.
+
+## Weighted Unifrac
+adonis2(wunifrac_inf ~ Medications, data=dat_inf)
+
+# p-value of 0.006, statistically significant. Significant difference in the relative abundance of taxa between medication groups.
+
+# Re-plot the Bray-Curtis plot but include ellipses to see significant groups
+ellip_pcoa_wunifrac_inf <- plot_ordination(ryan_inflamed, pcoa_wunifrac_inf, color = "Medications") +
+  labs(col = "Medication")+
+  stat_ellipse(type = "norm")
+ellip_pcoa_wunifrac_inf
+
+ggsave("ellip_plot_wunifrac_inf.png"
+       , ellip_pcoa_wunifrac_inf
+       , height=4, width=10)
+# Most ellipses are very large and don't show significant clustering. However, Mercaptopurine and Mercaptopurine+corticosteroids show tight clustering.
+
+####################################################################################################################################
+
+#### Beta diversity - Non-inflamed #####
+## Bray Curtis
+
+bc_ninf <- distance(ryan_noninflamed, method="bray")
+
+pcoa_bc_ninf <- ordinate(ryan_noninflamed, method="PCoA", distance=bc_ninf)
+
+gg_pcoa_bc_ninf <- plot_ordination(ryan_noninflamed, pcoa_bc_ninf, color = "Medications") +
+  labs(col = "Medication")
+gg_pcoa_bc_ninf
+
+# No clustering of specific medication groups observed, therefore, will likely be no significant difference in taxa abundance. PC1(15.7%), PC2(9.1%), 24.8% total variation.
+
+ggsave("plot_pcoa_bc_ninf.png"
+       , gg_pcoa_bc_ninf
+       , height=4, width=5)
+
+# Unweighted Unifrac Distance
+unifrac_ninf <- distance(ryan_noninflamed, method="unifrac")
+
+pcoa_unifrac_ninf <- ordinate(ryan_noninflamed, method="PCoA", distance=unifrac)
+
+gg_pcoa_unifrac_ninf <- plot_ordination(ryan_noninflamed, pcoa_unifrac_ninf, color = "Medications") +
+  labs(col = "Medication")
+gg_pcoa_unifrac_ninf
+
+# No actual medication groups were plotted, just NAs. This indicates that there are no medication groups in the noninflamed samples that have taxa groups in the phylogenetic tree.
+
+ggsave("plot_pcoa_unifrac_ninf.png"
+       , gg_pcoa_unifrac_ninf
+       , height=4, width=5)
+
+# Weighted Unifrac Distance
+wunifrac_ninf <- distance(ryan_noninflamed, method="wunifrac")
+
+pcoa_wunifrac_ninf <- ordinate(ryan_noninflamed, method="PCoA", distance=wunifrac)
+
+gg_pcoa_wunifrac_ninf <- plot_ordination(ryan_noninflamed, pcoa_wunifrac_ninf, color = "Medications") +
+  labs(col = "Medication")
+gg_pcoa_wunifrac_ninf
+
+# No actual medication groups were plotted, just NAs. This indicates that there are no medication groups in the noninflamed samples that have taxa groups in the phylogenetic tree.
+
+ggsave("plot_pcoa_wunifrac_ninf.png"
+       , gg_pcoa_wunifrac_ninf
+       , height=4, width=5)
+
+### PERMANOVA Test
+## to determine whether the overall microbial community composition differs with statistical significance between Medication groups
+
+## Bray-Curtis
+ryan_noninflamed_med <- subset_samples(ryan_noninflamed, !is.na(Medications))
+dat_ninf <- data.frame(sample_data(ryan_noninflamed_med))
+bc_ninf <- distance(ryan_noninflamed_med, method = "bray")
+
+adonis2(bc_ninf ~ Medications, data = dat_ninf)
+
+# p-value of 0.006, statistically significant difference in taxa abundance between medication groups.
+
+# Re-plot the Bray-Curtis plot but include ellipses to see significant groups
+ellip_pcoa_bc_ninf <- plot_ordination(ryan_noninflamed, pcoa_bc_ninf, color = "Medications") +
+  labs(col = "Medication")+
+  stat_ellipse(type = "norm")
+ellip_pcoa_bc_ninf
+
+ggsave("ellip_plot_bc_ninf.png"
+       , ellip_pcoa_bc_ninf
+       , height=4, width=10)
+# Most ellipses are very large except for the NA groups which cluster. Therefore, there is likely no real statistical significance in taxa abundance between the true medication groups.
