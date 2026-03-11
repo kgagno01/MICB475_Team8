@@ -407,6 +407,8 @@ ellip_pcoa_bc_inf
 ggsave("ellip_plot_bc_inf.png"
        , ellip_pcoa_bc_inf
        , height=4, width=10)
+       <img width="3000" height="1200" alt="ellip_plot_bc_inf" src="https://github.com/user-attachments/assets/19597f08-2d0b-44af-8b56-b0e84af078e6" />
+
 #### Most ellipses are very large and don't show significant clustering. The most concentrated group is Mercaptopurine+corticosteroids.
 
 #### Run a TukeyHSD post-hoc test to determine between which medication groups this statistical significance lies.
@@ -436,6 +438,8 @@ ellip_pcoa_unifrac_inf
 ggsave("ellip_plot_unifrac_inf.png"
        , ellip_pcoa_unifrac_inf
        , height=4, width=10)
+       <img width="3000" height="1200" alt="ellip_plot_unifrac_inf" src="https://github.com/user-attachments/assets/094a52bf-98fd-4143-8cfc-cd2d88adb729" />
+
 #### Most ellipses are very large and don't show significant clustering. However, Mercaptopurine, Mercaptopurine+corticosteroids, Mesalamine+mercaptopurine, and Mesalamine+mercaptopurine+anti-TNF show tight clustering. Overall, any medication group that contains Mercaptopurine shows significant difference.
 
 #### Run a TukeyHSD post-hoc test to determine between which medication groups this statistical significance lies.
@@ -460,6 +464,8 @@ ellip_pcoa_wunifrac_inf
 ggsave("ellip_plot_wunifrac_inf.png"
        , ellip_pcoa_wunifrac_inf
        , height=4, width=10)
+       <img width="3000" height="1200" alt="ellip_plot_wunifrac_inf" src="https://github.com/user-attachments/assets/16458941-6a53-4239-99c6-b0acba3e1500" />
+
 #### Most ellipses are very large and don't show significant clustering. However, Mercaptopurine and Mercaptopurine+corticosteroids show tight clustering.
 
 #### Run a TukeyHSD post-hoc test to determine between which medication groups this statistical significance lies.
@@ -482,6 +488,7 @@ pcoa_bc_ninf <- ordinate(ryan_noninflamed, method="PCoA", distance=bc_ninf)
 gg_pcoa_bc_ninf <- plot_ordination(ryan_noninflamed, pcoa_bc_ninf, color = "Medications") +
   labs(col = "Medication")
 gg_pcoa_bc_ninf
+<img width="1500" height="1200" alt="plot_pcoa_bc_ninf" src="https://github.com/user-attachments/assets/b530d4ae-7dbf-4436-aaaf-edf5bf929415" />
 
 #### No clustering of specific medication groups observed, therefore, will likely be no significant difference in taxa abundance. PC1(15.7%), PC2(9.1%), 24.8% total variation.
 
@@ -502,6 +509,7 @@ gg_pcoa_unifrac_ninf
 ggsave("plot_pcoa_unifrac_ninf.png"
        , gg_pcoa_unifrac_ninf
        , height=4, width=5)
+<img width="1500" height="1200" alt="plot_pcoa_unifrac_ninf" src="https://github.com/user-attachments/assets/3bb08de3-8438-450e-baa4-3cad66d10da8" />
 
 ### Weighted Unifrac Distance
 wunifrac_ninf <- distance(ryan_noninflamed, method="wunifrac")
@@ -516,6 +524,7 @@ gg_pcoa_wunifrac_ninf
 ggsave("plot_pcoa_wunifrac_ninf.png"
        , gg_pcoa_wunifrac_ninf
        , height=4, width=5)
+<img width="1500" height="1200" alt="plot_pcoa_wunifrac_ninf" src="https://github.com/user-attachments/assets/aa01c032-67cb-445d-9122-a088264a072b" />
 
 ### PERMANOVA Test
 #### to determine whether the overall microbial community composition differs with statistical significance between Medication groups
@@ -538,6 +547,8 @@ ellip_pcoa_bc_ninf
 ggsave("ellip_plot_bc_ninf.png"
        , ellip_pcoa_bc_ninf
        , height=4, width=10)
+       <img width="3000" height="1200" alt="ellip_plot_bc_ninf" src="https://github.com/user-attachments/assets/e8b31045-a0fa-4140-86c8-92032e405c03" />
+
 #### Most ellipses are very large except for the NA groups which cluster. Therefore, there is likely no real statistical significance in taxa abundance between the true medication groups.
 
 #### Run a TukeyHSD post-hoc test to determine between which medication groups this statistical significance lies.
@@ -562,6 +573,7 @@ ellip_pcoa_unifrac_ninf
 ggsave("ellip_plot_unifrac_ninf.png"
        , ellip_pcoa_unifrac_ninf
        , height=4, width=10)
+<img width="3000" height="1200" alt="ellip_plot_unifrac_ninf" src="https://github.com/user-attachments/assets/d0e2a702-1819-4846-97c3-62dccc962ae6" />
 
 #### Run a TukeyHSD post-hoc test to determine between which medication groups this statistical significance lies.
 pairwise.adonis2(
@@ -585,6 +597,7 @@ ellip_pcoa_wunifrac_ninf
 ggsave("ellip_plot_wunifrac_ninf.png"
        , ellip_pcoa_wunifrac_ninf
        , height=4, width=10)
+<img width="3000" height="1200" alt="ellip_plot_wunifrac_ninf" src="https://github.com/user-attachments/assets/b7a18017-83c5-4462-9131-6f1b604e647d" />
 
 #### Run a TukeyHSD post-hoc test to determine between which medication groups this statistical significance lies.
 pairwise.adonis2(
@@ -627,6 +640,7 @@ gg_richness_inf_combo
 ggsave(filename = "ryan_richness_inf_combo.png"
        , gg_richness_inf_combo
        , height=4, width=6)
+<img width="1800" height="1200" alt="ryan_richness_inf_combo" src="https://github.com/user-attachments/assets/f31defef-1219-4420-ba5d-7661d0ab4ef7" />
 
 ### Phylogenetic Diversity
 #### calculate Faith's phylogenetic diversity as PD
@@ -646,6 +660,7 @@ plot_pd_inf_combo
 ggsave(filename = "ryan_pd_inf_combo.png"
        , plot_pd_inf_combo
        , height=4, width=6)
+<img width="1800" height="1200" alt="ryan_pd_inf_combo" src="https://github.com/user-attachments/assets/bae0e818-be0f-498f-b597-a710466f3c84" />
 
 ### Kruskal-Wallis Test 
 #### to compare diversity between medications as the values are not normally distributed (non-parametric) and there are >2 groups (medications)
@@ -681,6 +696,7 @@ gg_richness_ninf_combo
 ggsave(filename = "ryan_richness_ninf_combo.png"
        , gg_richness_ninf_combo
        , height=4, width=6)
+<img width="1800" height="1200" alt="ryan_richness_ninf_combo" src="https://github.com/user-attachments/assets/71738cc0-778d-4fb8-95e7-37a800671621" />
 
 ### Phylogenetic Diversity
 #### calculate Faith's phylogenetic diversity as PD
@@ -700,6 +716,7 @@ plot_pd_ninf_combo
 ggsave(filename = "ryan_pd_ninf_combo.png"
        , plot_pd_ninf
        , height=4, width=6)
+<img width="1800" height="1200" alt="ryan_pd_ninf_combo" src="https://github.com/user-attachments/assets/6e26f747-f6f6-4b1b-b907-e91939303af6" />
 
 
 ### Kruskal-Wallis Test 
@@ -734,6 +751,7 @@ gg_pcoa_bc_inf_combo
 ggsave("plot_pcoa_bc_inf_combo.png"
        , gg_pcoa_bc_inf_combo
        , height=4, width=10)
+<img width="3000" height="1200" alt="plot_pcoa_bc_inf_combo" src="https://github.com/user-attachments/assets/4fa0c5cc-47c1-4a78-8431-e0e1bb17d318" />
 
 ### Unweighted Unifrac Distance
 unifrac_inf_combo <- distance(ryan_inflamed_combo, method="unifrac")
@@ -747,6 +765,7 @@ gg_pcoa_unifrac_inf_combo
 ggsave("plot_pcoa_unifrac_inf_combo.png"
        , gg_pcoa_unifrac_inf_combo
        , height=4, width=10)
+<img width="3000" height="1200" alt="plot_pcoa_unifrac_inf_combo" src="https://github.com/user-attachments/assets/de9315f3-b9d0-43ca-bb8d-0c0cb090eb1e" />
 
 ### Weighted Unifrac Distance
 wunifrac_inf_combo <- distance(ryan_inflamed_combo, method="wunifrac")
@@ -760,6 +779,7 @@ gg_pcoa_wunifrac_inf_combo
 ggsave("plot_pcoa_wunifrac_inf_combo.png"
        , gg_pcoa_wunifrac_inf
        , height=4, width=10)
+<img width="3000" height="1200" alt="plot_pcoa_wunifrac_inf_combo" src="https://github.com/user-attachments/assets/3ca6375d-3e9b-4d5d-bebb-2d6597a1dce6" />
 
 ### PERMANOVA Test
 #### to determine whether the overall microbial community composition differs with statistical significance between Medication groups
@@ -779,6 +799,7 @@ ellip_pcoa_bc_inf_combo
 ggsave("ellip_plot_bc_inf_combo.png"
        , ellip_pcoa_bc_inf_combo
        , height=4, width=10)
+<img width="3000" height="1200" alt="ellip_plot_bc_inf_combo" src="https://github.com/user-attachments/assets/0a2f20bb-de0e-4209-9a8d-e50f6cb2d4fd" />
 
 #### Run a TukeyHSD post-hoc test to determine between which combination medication groups this statistical significance lies.
 pairwise.adonis2(
@@ -815,7 +836,9 @@ gg_pcoa_bc_ninf_combo
 
 ggsave("plot_pcoa_bc_ninf_combo.png"
        , gg_pcoa_bc_ninf_combo
-       , height=4, width=5)
+       , height=4, width=5
+)
+<img width="1500" height="1200" alt="plot_pcoa_bc_ninf_combo" src="https://github.com/user-attachments/assets/c099bda1-7981-4ced-a6a8-623cfd426c1f" />
 
 ### Unweighted Unifrac Distance
 unifrac_ninf_combo <- distance(ryan_noninflamed_combo, method="unifrac")
@@ -830,6 +853,7 @@ gg_pcoa_unifrac_ninf_combo
 ggsave("plot_pcoa_unifrac_ninf_combo.png"
        , gg_pcoa_unifrac_ninf_combo
        , height=4, width=5)
+<img width="1500" height="1200" alt="plot_pcoa_unifrac_ninf_combo" src="https://github.com/user-attachments/assets/da7bf5b4-39fa-4660-bcc7-2f42601a0e79" />
 
 ### Weighted Unifrac Distance
 wunifrac_ninf_combo <- distance(ryan_noninflamed_combo, method="wunifrac")
@@ -844,6 +868,7 @@ gg_pcoa_wunifrac_ninf_combo
 ggsave("plot_pcoa_wunifrac_ninf_combo.png"
        , gg_pcoa_wunifrac_ninf_combo
        , height=4, width=5)
+<img width="1500" height="1200" alt="plot_pcoa_wunifrac_ninf_combo" src="https://github.com/user-attachments/assets/0ff7fc58-3c0b-4ca7-9b3f-4effcdf9b717" />
 
 ### PERMANOVA Test
 #### to determine whether the overall microbial community composition differs with statistical significance between combination medication groups
