@@ -5,11 +5,13 @@
 
 ## Project Overview
 This project utilizes the Ryan Dataset to analyze the spatial and pharmaceutical influences on the gut microbiome. We aim to isolate the effects of specific treatments (Anti-TNF and Mercaptopurine) compared to non-treated individuals and healthy controls, while accounting for the biopsy location as a key predictor.
-Data Processing Updates : 
-Changes the file to be  in markdown format. 
-Ran post-hoc test on beta diversity metrics.
-Filtered out NA samples in medications group. Re-did Aim 2 but only comparing diversity metrics of the combination drug approaches - filtering out single drug treatments.
-During Aim 2 analysis, filtered out healthy individuals before dividing into "inflammed" and "noninflamed" tables.
+## Data Processing Updates
+- [x] **Changes the file to be  in markdown format. 
+- [x] **Ran post-hoc test on beta diversity metrics.
+- [x] **Filtered out NA samples in medications group.
+- [x]  **Re-did Aim 2 but only comparing diversity metrics of the combination drug approaches - filtering out single drug treatments.
+- [x]  **During Aim 2 analysis, filtered out healthy individuals before dividing into "inflammed" and "noninflamed" tables.
+
 
 ## Analysis (Parallel Tasks)
 
