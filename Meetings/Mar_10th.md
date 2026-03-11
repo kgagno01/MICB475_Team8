@@ -24,9 +24,15 @@ This project utilizes the Ryan Dataset to analyze the spatial and pharmaceutical
 | **PICRUSt2** | [Kéryanne] | Functional pathway predictions (SCFA, barrier repair). | 
 
 ## Current Status: Meeting Agenda & Action Items
--Review and reconsider aim 2 results to confirm how we wish to proceed in terms of grouping the data for further testing 
--Review the results of the “post hoc” test and base decision on results
--clarify
--still keeping control?
--confirm comparison groups that are used for all future aims 
+
+
+Review and reconsider aim 2 results to confirm how we wish to proceed in terms of grouping the data for further testing 
+
+Review the results of the “post hoc” test and base decision on results
+
+clarify
+
+still keeping control?
+
+confirm comparison groups that are used for all future aims 
 
