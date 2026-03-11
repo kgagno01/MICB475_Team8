@@ -91,6 +91,7 @@ gg_richness
 ggsave(filename = "ryan_richness.png"
        , gg_richness
        , height=4, width=6)
+<img width="1800" height="1200" alt="ryan_richness" src="https://github.com/user-attachments/assets/e6fb7867-fd20-4af9-b2ca-9885c19c72ce" />
 
 ### Phylogenetic Diversity
 
@@ -114,6 +115,7 @@ plot.pd
 ggsave(filename = "ryan_pd.png"
        , plot.pd
        , height=4, width=6)
+<img width="1800" height="1200" alt="ryan_pd" src="https://github.com/user-attachments/assets/7564af33-e82b-4ed6-bd85-596a7e1fa3b1" />
 
 ### Kruskal-Wallis Test 
 #### to compare diversity between biopsy sites as the values are not normally distributed (non-parametric) and there are >2 groups (biopsy sites)
@@ -152,6 +154,7 @@ gg_pcoa_bc
 ggsave("plot_pcoa_bc.png"
        , gg_pcoa_bc
        , height=4, width=5)
+<img width="1500" height="1200" alt="plot_pcoa_bc" src="https://github.com/user-attachments/assets/2563cf92-f50d-494e-866f-4448f2442412" />
 
 ### Unweighted Unifrac Distance
 unifrac <- distance(ryan_healthy, method="unifrac")
@@ -167,6 +170,7 @@ gg_pcoa_unifrac
 ggsave("plot_pcoa_unifrac.png"
        , gg_pcoa_unifrac
        , height=4, width=5)
+<img width="1500" height="1200" alt="plot_pcoa_unifrac" src="https://github.com/user-attachments/assets/ef8abfa0-1533-44d9-a7c1-4ff7d2b92836" />
 
 ### Weighted Unifrac Distance
 wunifrac <- distance(ryan_healthy, method="wunifrac")
@@ -182,6 +186,7 @@ gg_pcoa_wunifrac
 ggsave("plot_pcoa_wunifrac.png"
        , gg_pcoa_wunifrac
        , height=4, width=5)
+<img width="1500" height="1200" alt="plot_pcoa_wunifrac" src="https://github.com/user-attachments/assets/74e9955d-1446-4c39-aa28-8a710c25b851" />
 
 
 ### PERMANOVA Tests
@@ -233,6 +238,7 @@ gg_richness_inf
 ggsave(filename = "ryan_richness_inf.png"
        , gg_richness_inf
        , height=4, width=6)
+<img width="1800" height="1200" alt="ryan_richness_inf" src="https://github.com/user-attachments/assets/3560fbe5-98d6-4e81-9550-835a9282ff8c" />
 
 ### Phylogenetic Diversity
 #### calculate Faith's phylogenetic diversity as PD
@@ -252,6 +258,7 @@ plot_pd_inf
 ggsave(filename = "ryan_pd_inf.png"
        , plot_pd_inf
        , height=4, width=6)
+<img width="1800" height="1200" alt="ryan_pd_inf" src="https://github.com/user-attachments/assets/e6550c2c-0ee5-4169-82c4-0aee3455afb4" />
 
 ### Kruskal-Wallis Test 
 #### to compare diversity between medications as the values are not normally distributed (non-parametric) and there are >2 groups (medications)
@@ -295,6 +302,7 @@ gg_richness_ninf
 ggsave(filename = "ryan_richness_ninf.png"
        , gg_richness_ninf
        , height=4, width=6)
+<img width="1800" height="1200" alt="ryan_richness_ninf" src="https://github.com/user-attachments/assets/ca70ada4-e4a7-40a6-98bf-27471a37ab6f" />
 
 ### Phylogenetic Diversity
 #### calculate Faith's phylogenetic diversity as PD
@@ -314,6 +322,7 @@ plot_pd_ninf
 ggsave(filename = "ryan_pd_ninf.png"
        , plot_pd_ninf
        , height=4, width=6)
+<img width="1800" height="1200" alt="ryan_pd_ninf" src="https://github.com/user-attachments/assets/14314d85-262f-448c-969d-4f8d9314c944" />
 
 
 ### Kruskal-Wallis Test 
@@ -358,6 +367,7 @@ gg_pcoa_bc_inf
 ggsave("plot_pcoa_bc_inf.png"
        , gg_pcoa_bc_inf
        , height=4, width=10)
+<img width="3000" height="1200" alt="plot_pcoa_bc_inf" src="https://github.com/user-attachments/assets/d0cfbb8c-a202-41f2-8160-09cbe969df75" />
 
 ### Unweighted Unifrac Distance
 unifrac_inf <- distance(ryan_inflamed, method="unifrac")
@@ -373,6 +383,7 @@ gg_pcoa_unifrac_inf
 ggsave("plot_pcoa_unifrac_inf.png"
        , gg_pcoa_unifrac_inf
        , height=4, width=10)
+<img width="3000" height="1200" alt="plot_pcoa_unifrac_inf" src="https://github.com/user-attachments/assets/39906825-7486-4300-bfcb-d6001eb841bb" />
 
 ### Weighted Unifrac Distance
 wunifrac_inf <- distance(ryan_inflamed, method="wunifrac")
@@ -388,6 +399,7 @@ gg_pcoa_wunifrac_inf
 ggsave("plot_pcoa_wunifrac_inf.png"
        , gg_pcoa_wunifrac_inf
        , height=4, width=10)
+<img width="3000" height="1200" alt="plot_pcoa_wunifrac_inf" src="https://github.com/user-attachments/assets/b83e2ec4-e2ac-4be4-b69e-17ccac5bce67" />
 
 ### PERMANOVA Tests
 ## to determine whether the overall microbial community composition differs with statistical significance between Medication groups
