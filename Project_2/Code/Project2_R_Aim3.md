@@ -247,8 +247,8 @@ ggsave("venn_G1_noninflamed.png", G1_noninf_venn)
 ```
 <img src="../Figures/venn_G1_inflamed.png" alt="G1 Inflamed Venn" width="600">
 <img src="../Figures/venn_G1_noninflamed.png" alt="G1 Noninflamed Venn" width="600">
-# G2: Corticosteroids + Mesalamine vs No medication
 
+# G2: Corticosteroids + Mesalamine vs No medication
 ```r
 C_M_inf_ASVs <- core_members(C_M_inflamed, detection = 0, prevalence = 0.7)
 C_M_noninf_ASVs <- core_members(C_M_noninflamed, detection = 0, prevalence = 0.7)
