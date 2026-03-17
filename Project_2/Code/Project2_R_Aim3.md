@@ -369,9 +369,9 @@ ggsave("venn_G4_noninflamed.png", G4_noninf_venn)
 ```
 <img src="../Figures/venn_G4_inflamed.png" alt="G4 Inflamed Venn" width="600">
 <img src="../Figures/venn_G4_noninflamed.png" alt="G4 Noninflamed Venn" width="600">
+
+
 # G5: Mesalamine only vs No medication
-
-
 # Inspect taxonomy of core ASVs
 ```r
 prune_taxa(M_inf_ASVs, ryan_RA) %>% tax_table()
