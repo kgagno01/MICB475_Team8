@@ -6,7 +6,9 @@
 <img src="https://raw.githubusercontent.com/kgagno01/MICB475_Team8/7a473f280056ed8dc1e0f097642b006cfc366195/Project_2/Figures/venn_G1_noninflamed.png" alt="G1 Noninflamed Venn" width="700">
 
 ##Figure 3: G2: Corticosteroids + Mesalamine vs No medication in inflamed tissues
-<img src="https://raw.githubusercontent.com/kgagno01/MICB475_Team8/7a473f280056ed8dc1e0f097642b006cfc366195/Project_2/Figures/venn_G1_noninflamed.png" alt="G1 Noninflamed Venn" width="700">
+<img src="https://raw.githubusercontent.com/kgagno01/MICB475_Team8/c3631aa9f8c4d8eb89caf07e192207ed9a48e5fb/Project_2/Figures/venn_G2_inflamed.png"
+     alt="Venn Diagram G2 Inflamed"
+     width="600">
 
 ##Figure 4:G2: Corticosteroids + Mesalamine vs No medication in Noninflamed tissues
 <img src="https://raw.githubusercontent.com/kgagno01/MICB475_Team8/7a473f280056ed8dc1e0f097642b006cfc366195/Project_2/Figures/venn_G2_noninflamed.png" alt="Venn Diagram G2 Non-inflamed" width="600">
