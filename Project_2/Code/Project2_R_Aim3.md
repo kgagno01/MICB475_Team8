@@ -1,6 +1,6 @@
-# ============================================================
+
 # Core Microbiome Analysis using phyloseq
-# ============================================================
+
 # This script:
 # 1. Imports metadata, OTU/ASV table, taxonomy, and phylogenetic tree
 # 2. Builds a phyloseq object
@@ -8,7 +8,7 @@
 # 4. Subsets samples by histological status and medication groups
 # 5. Identifies core ASVs for multiple group comparisons
 # 6. Visualizes core taxa with bar plots and Venn diagrams
-# ============================================================
+
 
 # Load required packages
 
