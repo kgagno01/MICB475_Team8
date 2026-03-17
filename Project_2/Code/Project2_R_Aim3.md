@@ -10,9 +10,8 @@
 # 6. Visualizes core taxa with bar plots and Venn diagrams
 # ============================================================
 
-# ----------------------------
 # Load required packages
-# ----------------------------
+
 library(phyloseq)
 library(ape)
 library(tidyverse)
@@ -22,9 +21,9 @@ library(microbiome)
 library(ggplot2)
 library(ggVennDiagram)
 
-# ----------------------------
+
 # Read in input data
-# ----------------------------
+
 meta <- read_delim(file = "ryan_metadata.tsv")
 
 otufp <- "exported-feature-table/feature-table.txt"
