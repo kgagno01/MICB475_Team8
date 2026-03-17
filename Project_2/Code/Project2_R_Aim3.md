@@ -35,25 +35,25 @@ tax <- read_delim(taxfp, delim = "\t")
 phylotreefp <- "exported-tree/tree.nwk"
 phylotree <- read.tree(phylotreefp)
 
-# ----------------------------
+
 # Build OTU table
-# ----------------------------
+
 otu_mat <- as.matrix(otu[, -1])
 rownames(otu_mat) <- otu$`#OTU ID`
 OTU <- otu_table(otu_mat, taxa_are_rows = TRUE)
 
-# ----------------------------
+
 # Build sample_data object
-# ----------------------------
+
 # Assumes the first column in metadata contains sample IDs
 samp_df <- as.data.frame(meta)
 rownames(samp_df) <- samp_df[[1]]
 samp_df <- samp_df[, -1]   # Remove sample ID column after setting row names
 SAMP <- sample_data(samp_df)
 
-# ----------------------------
+
 # Build taxonomy table
-# ----------------------------
+
 # Split semicolon-delimited taxonomy string into standard ranks
 tax_mat <- tax %>%
   select(-Confidence) %>%
@@ -69,29 +69,29 @@ tax_mat <- tax_mat[, -1]
 rownames(tax_mat) <- tax$`Feature ID`
 TAX <- tax_table(tax_mat)
 
-# ----------------------------
+
 # Build phyloseq object
-# ----------------------------
+
 ryan_phyloseq <- phyloseq(OTU, SAMP, TAX, phylotree)
 
 # Save phyloseq object for reuse
 save(ryan_phyloseq, file = "ryan_phyloseq.RData")
 
-# ----------------------------
+
 # Convert OTU counts to relative abundance
-# ----------------------------
+
 ryan_RA <- transform_sample_counts(ryan_phyloseq, fun = function(x) x / sum(x))
 
-# ----------------------------
+
 # Subset by histological status
-# ----------------------------
+
 # NOTE: These strings appear to include trailing spaces in the metadata.
 inflamed <- subset_samples(ryan_RA, Histological.status == "Inflamed tissue ")
 noninflamed <- subset_samples(ryan_RA, Histological.status == "Noninflamed tissue ")
 
-# ----------------------------
+
 # Subset by treatment groups
-# ----------------------------
+
 # C alone = Corticosteroids only
 C_inflamed <- subset_samples(inflamed, Medications == "Corticosteroids")
 C_noninflamed <- subset_samples(noninflamed, Medications == "Corticosteroids")
@@ -132,10 +132,10 @@ C_Comb_noninflamed <- subset_samples(
   )
 )
 
-# ----------------------------
+
 # Optional: Merge phyloseq objects for direct comparisons
 # (Defined here in case you want to use them later)
-# ----------------------------
+
 
 # C vs M
 C_vs_M_inflamed <- merge_phyloseq(C_inflamed, M_inflamed)
@@ -153,17 +153,17 @@ C_M_vs_No_noninflamed <- merge_phyloseq(C_M_noninflamed, No_noninflamed)
 C_Comb_vs_No_inflamed <- merge_phyloseq(C_Comb_inflamed, No_inflamed)
 C_Comb_vs_No_noninflamed <- merge_phyloseq(C_Comb_noninflamed, No_noninflamed)
 
-# ----------------------------
+
 # Check number of samples in key groups
-# ----------------------------
+
 nsamples(C_inflamed)
 nsamples(M_inflamed)
 nsamples(C_M_inflamed)
 nsamples(No_inflamed)
 
-# ----------------------------
+
 # Helper function for bar plots
-# ----------------------------
+
 # Replaces missing Genus values with fallback labels based on Family or Order
 plot_core <- function(physeq, group_name) {
   tax <- tax_table(physeq)
@@ -188,9 +188,8 @@ plot_core <- function(physeq, group_name) {
     theme(axis.text.x = element_text(angle = 90, hjust = 1))
 }
 
-# ============================================================
 # G1: Corticosteroids only vs All Inflamed / All Noninflamed
-# ============================================================
+
 
 # Core ASVs at 70% prevalence
 C_inf_ASVs <- core_members(C_inflamed, detection = 0, prevalence = 0.7)
@@ -227,9 +226,9 @@ G1_noninf_venn <- ggVennDiagram(x = G1_noninf_list)
 ggsave("venn_G1_inflamed.png", G1_inf_venn)
 ggsave("venn_G1_noninflamed.png", G1_noninf_venn)
 
-# ============================================================
+
 # G2: Corticosteroids + Mesalamine vs No medication
-# ============================================================
+
 
 C_M_inf_ASVs <- core_members(C_M_inflamed, detection = 0, prevalence = 0.7)
 C_M_noninf_ASVs <- core_members(C_M_noninflamed, detection = 0, prevalence = 0.7)
@@ -265,9 +264,9 @@ G2_noninf_venn <- ggVennDiagram(x = G2_noninf_list)
 ggsave("venn_G2_inflamed.png", G2_inf_venn)
 ggsave("venn_G2_noninflamed.png", G2_noninf_venn)
 
-# ============================================================
+
 # G3: Corticosteroid combinations vs No medication
-# ============================================================
+
 
 C_Comb_inf_ASVs <- core_members(C_Comb_inflamed, detection = 0, prevalence = 0.7)
 C_Comb_noninf_ASVs <- core_members(C_Comb_noninflamed, detection = 0, prevalence = 0.7)
@@ -299,9 +298,9 @@ G3_noninf_venn <- ggVennDiagram(x = G3_noninf_list)
 ggsave("venn_G3_inflamed.png", G3_inf_venn)
 ggsave("venn_G3_noninflamed.png", G3_noninf_venn)
 
-# ============================================================
+
 # G4: Corticosteroids only vs Mesalamine only
-# ============================================================
+
 
 M_inf_ASVs <- core_members(M_inflamed, detection = 0, prevalence = 0.7)
 M_noninf_ASVs <- core_members(M_noninflamed, detection = 0, prevalence = 0.7)
@@ -335,9 +334,9 @@ G4_noninf_venn <- ggVennDiagram(x = G4_noninf_list)
 ggsave("venn_G4_inflamed.png", G4_inf_venn)
 ggsave("venn_G4_noninflamed.png", G4_noninf_venn)
 
-# ============================================================
+
 # G5: Mesalamine only vs No medication
-# ============================================================
+
 
 # Inspect taxonomy of core ASVs
 prune_taxa(M_inf_ASVs, ryan_RA) %>% tax_table()
