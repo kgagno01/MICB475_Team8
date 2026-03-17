@@ -101,12 +101,12 @@ noninflamed <- subset_samples(ryan_RA, Histological.status == "Noninflamed tissu
 C_inflamed <- subset_samples(inflamed, Medications == "Corticosteroids")
 C_noninflamed <- subset_samples(noninflamed, Medications == "Corticosteroids")
 ```
-# M alone = Mesalamine only
+## M alone = Mesalamine only
 ```r
 M_inflamed <- subset_samples(inflamed, Medications == "Mesalamine")
 M_noninflamed <- subset_samples(noninflamed, Medications == "Mesalamine")
 ```
-# C + M = Corticosteroids + Mesalamine
+## C + M = Corticosteroids + Mesalamine
 ```r
 C_M_inflamed <- subset_samples(
   inflamed,
@@ -118,12 +118,12 @@ C_M_noninflamed <- subset_samples(
   Medications %in% c("Mesalamine+corticosteroids", "corticosteroids+Mesalamine")
 )
 ```
-# No medication
+## No medication
 ```r
 No_inflamed <- subset_samples(inflamed, Medications == "No")
 No_noninflamed <- subset_samples(noninflamed, Medications == "No")
 ```
-# C + combination groups (multi-drug combinations including corticosteroids)
+## C + combination groups (multi-drug combinations including corticosteroids)
 ```r
 C_Comb_inflamed <- subset_samples(
   inflamed,
@@ -142,32 +142,32 @@ C_Comb_noninflamed <- subset_samples(
 )
 ```
 
-# Optional: Merge phyloseq objects for direct comparisons
-# (Defined here in case you want to use them later)
+## Optional: Merge phyloseq objects for direct comparisons
+## (Defined here in case you want to use them later)
 
 
-# C vs M
+## C vs M
 ```r
 C_vs_M_inflamed <- merge_phyloseq(C_inflamed, M_inflamed)
 C_vs_M_noninflamed <- merge_phyloseq(C_noninflamed, M_noninflamed)
 ```
-# M vs No
+## M vs No
 ```r
 M_vs_No_inflamed <- merge_phyloseq(M_inflamed, No_inflamed)
 M_vs_No_noninflamed <- merge_phyloseq(M_noninflamed, No_noninflamed)
 ```
-# C + M vs No
+## C + M vs No
 ```r
 C_M_vs_No_inflamed <- merge_phyloseq(C_M_inflamed, No_inflamed)
 C_M_vs_No_noninflamed <- merge_phyloseq(C_M_noninflamed, No_noninflamed)
 ```
-# C + combination vs No
+## C + combination vs No
 ```r
 C_Comb_vs_No_inflamed <- merge_phyloseq(C_Comb_inflamed, No_inflamed)
 C_Comb_vs_No_noninflamed <- merge_phyloseq(C_Comb_noninflamed, No_noninflamed)
 ```
 
-# Check number of samples in key groups
+## Check number of samples in key groups
 ```r
 nsamples(C_inflamed)
 nsamples(M_inflamed)
@@ -175,7 +175,7 @@ nsamples(C_M_inflamed)
 nsamples(No_inflamed)
 ```
 
-# Helper function for bar plots
+## Helper function for bar plots
 
 # Replaces missing Genus values with fallback labels based on Family or Order
 ```r
