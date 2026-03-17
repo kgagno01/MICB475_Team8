@@ -226,9 +226,9 @@ G1_noninf_venn <- ggVennDiagram(x = G1_noninf_list)
 ggsave("venn_G1_inflamed.png", G1_inf_venn)
 ggsave("venn_G1_noninflamed.png", G1_noninf_venn)
 <img src="../Files/venn_G1_inflamed.png" alt="G1 Inflamed Venn" width="450">
+venn_G2_noninflamed.png
 
-
-
+![G2 Noninflamed Venn](venn_G2_inflamed.png)
 # G2: Corticosteroids + Mesalamine vs No medication
 
 
