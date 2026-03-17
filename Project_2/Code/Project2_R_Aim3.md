@@ -265,7 +265,7 @@ G2_noninf_venn <- ggVennDiagram(x = G2_noninf_list)
 
 ggsave("venn_G2_inflamed.png", G2_inf_venn)
 ggsave("venn_G2_noninflamed.png", G2_noninf_venn)
-![G2 Inflamed Venn](../Files/venn_G2_inflamed.png)
+![G2 Inflamed Venn](venn_G2_inflamed.png)
 ![G2 Noninflamed Venn](../Files/venn_G2_noninflamed.png)
 
 # G3: Corticosteroid combinations vs No medication
