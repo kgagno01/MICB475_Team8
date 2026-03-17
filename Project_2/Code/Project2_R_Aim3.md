@@ -1,7 +1,7 @@
 
 # Core Microbiome Analysis using phyloseq
 
-# This script:
+# Contents:
 # 1. Imports metadata, OTU/ASV table, taxonomy, and phylogenetic tree
 # 2. Builds a phyloseq object
 # 3. Converts counts to relative abundance
