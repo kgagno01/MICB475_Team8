@@ -225,10 +225,8 @@ G1_noninf_venn <- ggVennDiagram(x = G1_noninf_list)
 
 ggsave("venn_G1_inflamed.png", G1_inf_venn)
 ggsave("venn_G1_noninflamed.png", G1_noninf_venn)
-<img src="../Files/venn_G1_inflamed.png" alt="G1 Inflamed Venn" width="450">
-venn_G2_noninflamed.png
-
-![G2 Noninflamed Venn](venn_G2_inflamed.png)
+<img src="../Figures/venn_G1_inflamed.png" alt="G1 Inflamed Venn" width="450">
+<img src="../Figures/venn_G1_noninflamed.png" alt="G1 Noninflamed Venn" width="450">
 # G2: Corticosteroids + Mesalamine vs No medication
 
 
@@ -265,8 +263,8 @@ G2_noninf_venn <- ggVennDiagram(x = G2_noninf_list)
 
 ggsave("venn_G2_inflamed.png", G2_inf_venn)
 ggsave("venn_G2_noninflamed.png", G2_noninf_venn)
-![G2 Inflamed Venn](venn_G2_inflamed.png)
-![G2 Noninflamed Venn](../Files/venn_G2_noninflamed.png)
+<img src="../Figures/venn_G2_inflamed.png" alt="G2 Inflamed Venn" width="450">
+<img src="../Figures/venn_G2_noninflamed.png" alt="G2 Noninflamed Venn" width="450">
 
 # G3: Corticosteroid combinations vs No medication
 
