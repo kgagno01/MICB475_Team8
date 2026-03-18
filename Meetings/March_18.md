@@ -6,12 +6,16 @@ This repository contains the Aim 3, 4 and 5 analysis of colonic mucosal biopsies
 
 ## Meeting Agenda: March 2026
 
-### 1. Project Status Overview
-* Aim 1: Spatial variation across healthy colonic biopsy sites. (Status: Completed)
-* Aim 2: Impact of medication on community alpha and beta diversity. (Status: Completed)
-* Aim 3: Core microbiome identification (Medicated vs. Non-medicated). (Status: Completed - Peer Task)
-* Aim 4: Indicator taxa associated with inflammation and metadata. (Status: Completed - Peer Task)
-* Aim 5: Differential abundance of specific species via DESeq2. (Status: Completed - Hanna Wang)
+### Project Status Overview
+
+| Experimental Aim | Description | Lead | Status |
+| :--- | :--- | :--- | :--- |
+| **Aim 1** | Spatial variation across healthy colonic biopsy sites. | Evelyn | Completed |
+| **Aim 2** | Impact of medication on community alpha and beta diversity. | Evelyn | Completed |
+| **Aim 3** | Core microbiome identification (Medicated vs. Non-medicated). | Yun Yun | Completed |
+| **Aim 4** | Indicator taxa associated with inflammation and metadata. | Ahnaf | Pending |
+| **Aim 5** | Differential abundance of specific species via DESeq2. | Hanna | Completed |
+| **Aim 6** | Functional composition and metabolic pathway enrichment (PICRUSt2). | Kéryanne | In Progress |
 
 ### 2. Technical Note on Sample Sizes
 * Statistical Constraint: While the pipeline was designed to analyze both inflamed and non-inflamed tissues, it was determined that across all comparison groups (G1-G5), there were insufficient sample sizes within the non-inflamed cohort to perform statistically robust differential abundance testing. 
