@@ -74,22 +74,23 @@ Analysis performed using a negative binomial distribution with a pseudo-count (+
 | G4: Cortico vs Mesalamine | Lachnospiraceae (f), UCG-002 | Geofilum, Sutterella |
 | G5: Mesalamine vs No | Segatella, Porphyromonadaceae | Sutterella, Geofilum, Pseudoflavonifractor |
 
-#### Visualizations
+### Visualizations
 
 ### Figure 1: G1: Corticosteroids vs No medication in Inflamed tissues
-<img src="./Figures/Aim%205/Volcano_G1_Inflamed_tissue.png" alt="Volcano Plot G1 Inflamed" width="600">
+<img src="https://raw.githubusercontent.com/kgagno01/MICB475_Team8/main/Project_2/Figures/Aim%205/Volcano_G1_Inflamed_tissue.png" alt="Volcano Plot G1 Inflamed" width="800">
 
-![G2 Volcano Plot](./Analysis_Results/Volcano_Final_G2_Inflamed_tissue.png)
-*Figure 2: Differential abundance for Mesalamine+Corticosteroids vs No Medication.*
+### Figure 2: G2: Mesalamine + Corticosteroids vs No medication in Inflamed tissues
+<img src="https://raw.githubusercontent.com/kgagno01/MICB475_Team8/main/Project_2/Figures/Aim%205/Volcano_G2_Inflamed_tissue.png" alt="Volcano Plot G2 Inflamed" width="800">
 
-![G3 Volcano Plot](./Analysis_Results/Volcano_Final_G3_Inflamed_tissue.png)
-*Figure 3: Differential abundance for Triple Therapy vs No Medication.*
+### Figure 3: G3: Triple Therapy vs No medication in Inflamed tissues
+<img src="https://raw.githubusercontent.com/kgagno01/MICB475_Team8/main/Project_2/Figures/Aim%205/Volcano_G3_Inflamed_tissue.png" alt="Volcano Plot G3 Inflamed" width="800">
 
-![G4 Volcano Plot](./Analysis_Results/Volcano_Final_G4_Inflamed_tissue.png)
-*Figure 4: Differential abundance for Corticosteroids vs Mesalamine.*
+### Figure 4: G4: Corticosteroids vs Mesalamine in Inflamed tissues
+<img src="https://raw.githubusercontent.com/kgagno01/MICB475_Team8/main/Project_2/Figures/Aim%205/Volcano_G4_Inflamed_tissue.png" alt="Volcano Plot G4 Inflamed" width="800">
 
-![G5 Volcano Plot](./Analysis_Results/Volcano_Final_G5_Inflamed_tissue.png)
-*Figure 5: Differential abundance for Mesalamine vs No Medication.*
+### Figure 5: G5: Mesalamine vs No medication in Inflamed tissues
+<img src="https://raw.githubusercontent.com/kgagno01/MICB475_Team8/main/Project_2/Figures/Aim%205/Volcano_G5_Inflamed_tissue.png" alt="Volcano Plot G5 Inflamed" width="800">
+Note: Unique [XXXX] labels in figures refer to the specific ASV row names in the accompanying Results_Data CSV files.
 
 ---
 
@@ -107,4 +108,3 @@ Analysis performed using a negative binomial distribution with a pseudo-count (+
 
 ---
 
-Note: Unique [XXXX] labels in figures refer to the specific ASV row names in the accompanying Results_Data CSV files.
