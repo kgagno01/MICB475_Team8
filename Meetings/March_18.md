@@ -78,6 +78,22 @@ Analysis performed using a negative binomial distribution with a pseudo-count (+
 | **G4: Cortico vs Mesalamine** | Lachnospiraceae (f), UCG-002 | Geofilum, Lachnospiraceae (f) |
 | **G5: Mesalamine vs No** | Segatella, Porphyromonadaceae (f) | Sutterella, Geofilum, Lachnospiraceae (f) |
 
+### Aim 5 Results: Functional Taxonomy and Biological Significance
+
+* **Sutterella (Proteobacteria)**: Consistently depleted in G1, G2, G4, and G5. Known for mucosal adhesion and often elevated in IBD; its reduction suggests a decrease in pro-inflammatory Proteobacteria signatures.
+* **Geofilum (Bacillota)**: Frequent depletion across multiple medication groups. While less characterized, its strong association with the untreated "No Medication" group marks it as a reliable indicator of active dysbiosis.
+* **Paralactobacillus**: High-confidence enrichment specific to G3 (Triple Therapy). These Lactic Acid Bacteria (LAB) produce lactate and antimicrobial peptides, potentially lowering colonic pH to inhibit opportunistic pathogens.
+* **Oscillospiraceae & Lachnospiraceae**: Enriched in G1 (Corticosteroids) and G4. These are obligate anaerobes and primary butyrate producers; butyrate is the essential energy source for colonocytes and induces anti-inflammatory T-regulatory cells.
+* **Segatella (Prevotellaceae)**: Enriched in G2 and G5 (Mesalamine groups). These bacteria specialize in degrading complex plant-derived glycans, indicating a shift toward a more stable, fiber-fermenting microbial community.
+* **Coprobacter**: Primary depletion in G2. Known as a propionate producer; its depletion despite combination therapy suggests a specific metabolic gap that Mesalamine + Corticosteroids may not address.
+* **Phocea & Incertae_Sedis**: Primary depletion in G3. These taxa are frequently associated with "leaky gut" and dysbiotic profiles; their removal highlights the efficacy of the Triple Therapy (Anti-TNF) regimen.
+
+#### Biological Implications
+* **Microbiome Remodeling**: Significant transition from pro-inflammatory Proteobacteria (Sutterella) toward beneficial Firmicutes/Bacillota (butyrate producers).
+* **Treatment-Specific Signatures**: Triple therapy (G3) uniquely fosters protective LAB (Paralactobacillus), whereas mono-therapies focus more on restoring general SCFA-producing families.
+* **Mucosal Healing**: The enrichment of butyrate-producing Oscillospiraceae suggests that medications are creating an environment conducive to intestinal barrier repair.
+* **Methodological Integrity**: By focusing on 109 inflamed samples, the analysis captured high-resolution taxonomic shifts that would have been diluted in the non-inflamed cohort.
+
 ### Visualizations
 
 ### Figure 1: G1: Corticosteroids vs No medication in Inflamed tissues
@@ -98,25 +114,7 @@ Note: Unique [XXXX] labels in figures refer to the specific ASV row names in the
 
 ---
 
-### 6. Aim 5 Results: Functional Taxonomy and Biological Significance
-
-* Sutterella (Proteobacteria): Consistently depleted in G1, G2, G4, and G5. Known for mucosal adhesion and often elevated in IBD; its reduction suggests a decrease in pro-inflammatory Proteobacteria signatures.
-* Geofilum (Bacillota): Frequent depletion across multiple medication groups. While less characterized, its strong association with the untreated "No Medication" group marks it as a reliable indicator of active dysbiosis.
-* Paralactobacillus: High-confidence enrichment specific to G3 (Triple Therapy). These Lactic Acid Bacteria (LAB) produce lactate and antimicrobial peptides, potentially lowering colonic pH to inhibit opportunistic pathogens.
-* Oscillospiraceae & Lachnospiraceae: Enriched in G1 (Corticosteroids) and G4. These are obligate anaerobes and primary butyrate producers; butyrate is the essential energy source for colonocytes and induces anti-inflammatory T-regulatory cells.
-* Segatella (Prevotellaceae): Enriched in G2 and G5 (Mesalamine groups). These bacteria specialize in degrading complex plant-derived glycans, indicating a shift toward a more stable, fiber-fermenting microbial community.
-* Coprobacter: Primary depletion in G2. Known as a propionate producer; its depletion despite combination therapy suggests a specific metabolic gap that Mesalamine + Corticosteroids may not address.
-* Phocea & Incertae_Sedis: Primary depletion in G3. These taxa are frequently associated with "leaky gut" and dysbiotic profiles; their removal highlights the efficacy of the Triple Therapy (Anti-TNF) regimen.
-
-#### Biological Implications
-* Microbiome Remodeling: Significant transition from pro-inflammatory Proteobacteria (Sutterella) toward beneficial Firmicutes/Bacillota (butyrate producers).
-* Treatment-Specific Signatures: Triple therapy (G3) uniquely fosters protective LAB (Paralactobacillus), whereas mono-therapies focus more on restoring general SCFA-producing families.
-* Mucosal Healing: The enrichment of butyrate-producing Oscillospiraceae suggests that medications are creating an environment conducive to intestinal barrier repair.
-* Methodological Integrity: By focusing on 109 inflamed samples, the analysis captured high-resolution taxonomic shifts that would have been diluted in the non-inflamed cohort.
-
----
-
-### 7. Next Steps: Aim 6 (PICRUSt2)
+### 6. Next Steps: Aim 6 (PICRUSt2)
 * Use identified taxa from Aims 3, 4, and 5 to predict functional composition and metabolic pathway enrichment.
 * Link community composition to the inflamed phenotype observed in the Ryan et al. clinical dataset.
 * Prioritize specific microbial targets for the "Blue-sky" proposal.
