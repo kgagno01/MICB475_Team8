@@ -27,29 +27,31 @@ This repository contains the Aim 3, 4 and 5 analysis of colonic mucosal biopsies
 ### Figure 2: G1: Corticosteroids only vs All Noninflamed
 <img src="https://raw.githubusercontent.com/kgagno01/MICB475_Team8/7a473f280056ed8dc1e0f097642b006cfc366195/Project_2/Figures/venn_G1_noninflamed.png" alt="G1 Noninflamed Venn" width="700">
 
+#Note: There are more shared microsbiome composition seen in inflamed tissues compared to non-inflamed tissues when corticosteroids were used.
 ### Figure 3: G2: Corticosteroids + Mesalamine vs No medication in Inflamed tissues
 <img src="https://raw.githubusercontent.com/kgagno01/MICB475_Team8/c3631aa9f8c4d8eb89caf07e192207ed9a48e5fb/Project_2/Figures/venn_G2_inflamed.png" alt="Venn Diagram G2 Inflamed" width="600">
 
 ### Figure 4: G2: Corticosteroids + Mesalamine vs No medication in Noninflamed tissues
 <img src="https://raw.githubusercontent.com/kgagno01/MICB475_Team8/7a473f280056ed8dc1e0f097642b006cfc366195/Project_2/Figures/venn_G2_noninflamed.png" alt="Venn Diagram G2 Non-inflamed" width="600">
-
+#Note: There are more shared microbiome composition seen when comparing inflamed tissues with no medication use and inflamed tissue with corticiosteroids+Mesalamine use.
 ### Figure 5: G3: Corticosteroid combinations vs No medication in Inflamed tissues
 <img src="https://raw.githubusercontent.com/kgagno01/MICB475_Team8/7a473f280056ed8dc1e0f097642b006cfc366195/Project_2/Figures/venn_G3_inflamed.png" alt="Venn Diagram G3 Inflamed" width="600">
 
 ### Figure 6: G3: Corticosteroid combinations vs No medication in Noninflamed tissues
 <img src="https://raw.githubusercontent.com/kgagno01/MICB475_Team8/7a473f280056ed8dc1e0f097642b006cfc366195/Project_2/Figures/venn_G3_noninflamed.png" alt="Venn Diagram G3 Non-inflamed" width="600">
-
+#Note: There are more shared microbiome composition seen when comparing noninflamed tissues with no medication use and noninflamed tissue with  triple therapy. However, non-inflamed and inflamed tissues shows rough similarity in the percentage of shared micrbiome percentages.
 ### Figure 7: G4: Corticosteroids only vs Mesalamine only in Inflamed tissues
 <img src="https://raw.githubusercontent.com/kgagno01/MICB475_Team8/7a473f280056ed8dc1e0f097642b006cfc366195/Project_2/Figures/venn_G4_inflamed.png" alt="Venn Diagram G4 Inflamed" width="600">
 
 ### Figure 8: G4: Corticosteroids only vs Mesalamine only in Noninflamed tissues
 <img src="https://raw.githubusercontent.com/kgagno01/MICB475_Team8/7a473f280056ed8dc1e0f097642b006cfc366195/Project_2/Figures/venn_G4_noninflamed.png" alt="Venn Diagram G4 Non-inflamed" width="600">
-
+#Note: There are more shared microbiome composition seen when comparing inflamed tissues with Corticosteroids use and inflamed tissue with Mesalamine use. 
 ### Figure 9: G5: Mesalamine only vs No medication in Inflamed tissues
 <img src="https://raw.githubusercontent.com/kgagno01/MICB475_Team8/7a473f280056ed8dc1e0f097642b006cfc366195/Project_2/Figures/venn_G5_inflamed.png" alt="Venn Diagram G5 Inflamed" width="600">
 
 ### Figure 10: G5: Mesalamine only vs No medication in Noninflamed tissues
 <img src="https://raw.githubusercontent.com/kgagno01/MICB475_Team8/7a473f280056ed8dc1e0f097642b006cfc366195/Project_2/Figures/venn_G5_noninflamed.png" alt="Venn Diagram G5 Non-inflamed" width="600">
+#Note: There are more shared microbiome composition seen when comparing inflamed tissues with no medication use and inflamed tissue with Mesalamine use.
 
 ---
 
