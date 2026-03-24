@@ -1,3 +1,17 @@
+# Aim 3 Venn diagrams
+## G6: Cortocosteroids only vs no medication in inflammed tissues
+<img src="https://raw.githubusercontent.com/kgagno01/MICB475_Team8/3d0c57e9b723dd59fbd05894c32e893d4a7769d2/Project_2/Figures/venn_G6_inflamed.png" alt="Venn G6 Inflamed" width="800" />
+
+## G6: Cortocosteroids only vs no medication in noninflammed tissues
+
+## G7: No Medication vs Corticosteroids Only vs Mesalamine Only vs Corticosteroids + Mesalamine — Inflamed 
+
+## G7: No Medication vs Corticosteroids Only vs Mesalamine Only vs Corticosteroids + Mesalamine — Noninflamed
+
+
+
+
+
 G1: Corticosteroids vs No Medication
 Indicator taxon: Unclassified Family
 Association: Enriched in corticosteroid-treated samples
