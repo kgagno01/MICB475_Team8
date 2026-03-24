@@ -12,7 +12,7 @@
 
 <img src="https://raw.githubusercontent.com/kgagno01/MICB475_Team8/8ca4808bb23f141210a92e682571ef843fdb0531/Project_2/Figures/venn_G7_noninflamed.png" alt="Venn G7 Noninflamed" width="900" />
 
-
+# Aim 4
 
 G1: Corticosteroids vs No Medication
 Indicator taxon: Unclassified Family
