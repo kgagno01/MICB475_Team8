@@ -50,6 +50,7 @@ This repository contains the Aim 3, 4 and 5 analysis of colonic mucosal biopsies
 ### Figure 8: G4: Corticosteroids only vs Mesalamine only in Noninflamed tissues
 <img src="https://raw.githubusercontent.com/kgagno01/MICB475_Team8/7a473f280056ed8dc1e0f097642b006cfc366195/Project_2/Figures/venn_G4_noninflamed.png" alt="Venn Diagram G4 Non-inflamed" width="600">
 #Note: There are more shared microbiome composition seen when comparing inflamed tissues with Corticosteroids use and inflamed tissue with Mesalamine use. 
+
 ### Figure 9: G5: Mesalamine only vs No medication in Inflamed tissues
 <img src="https://raw.githubusercontent.com/kgagno01/MICB475_Team8/7a473f280056ed8dc1e0f097642b006cfc366195/Project_2/Figures/venn_G5_inflamed.png" alt="Venn Diagram G5 Inflamed" width="600">
 
