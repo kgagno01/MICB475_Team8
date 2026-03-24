@@ -112,13 +112,3 @@ Analysis performed using a negative binomial distribution with a pseudo-count (+
 ### Figure 5: G5: Mesalamine vs No medication in Inflamed tissues
 <img src="https://raw.githubusercontent.com/kgagno01/MICB475_Team8/main/Project_2/Figures/Aim%205/Volcano_G5_Inflamed_tissue.png" alt="Volcano Plot G5 Inflamed" width="800">
 Note: Unique [XXXX] labels in figures refer to the specific ASV row names in the accompanying Results_Data CSV files.
-
----
-
-### 6. Next Steps: Aim 6 (PICRUSt2)
-* Use identified taxa from Aims 3, 4, and 5 to predict functional composition and metabolic pathway enrichment.
-* Link community composition to the inflamed phenotype observed in the Ryan et al. clinical dataset.
-* Prioritize specific microbial targets for the "Blue-sky" proposal.
-
----
-
