@@ -1,16 +1,22 @@
 # Aim 3 Venn diagrams
-## G6: Cortocosteroids only vs no medication in inflammed tissues
+## G6: Corticosteroids only vs no medication in inflamed tissues
 <img src="https://raw.githubusercontent.com/kgagno01/MICB475_Team8/3d0c57e9b723dd59fbd05894c32e893d4a7769d2/Project_2/Figures/venn_G6_inflamed.png" alt="Venn G6 Inflamed" width="800" />
 
-## G6: Cortocosteroids only vs no medication in noninflammed tissues
+Comparing diagrams between corticosteroid use vs corticosteroid use and mesalamine use (double therapy) in inflammed tissues, we can see that core microbiome composition appeared to be more variable when tissues were treated with corticosteroids only. This could suggest that double therapy doesn't seem to have as much as an effect than just using corticosteroids singularly.
+
+## G6: Corticosteroids only vs no medication in noninflamed tissues
 <img src="https://raw.githubusercontent.com/kgagno01/MICB475_Team8/b5ad6002958e80cb57f45ddd944d2af837bab117/Project_2/Figures/venn_G6_noninflamed.png" alt="Venn G6 Noninflamed" width="800" /> 
+
+Comparing diagrams between corticosteroid use vs corticosteroid use and mesalamine use (double therapy) in non-inflamed tissues, we also see similar results in which core microbiome composition appeared to be more variable when tissues were treated with corticosteroids only. This could suggest that double therapy doesn't seem to have as much as an effect than just using corticosteroids singularly.
 
 ## G7: No Medication vs Corticosteroids Only vs Mesalamine Only vs Corticosteroids + Mesalamine — Inflamed 
 <img src="https://raw.githubusercontent.com/kgagno01/MICB475_Team8/8ca4808bb23f141210a92e682571ef843fdb0531/Project_2/Figures/venn_G7_inflamed.png" alt="Venn G7 Inflamed" width="900" />
+There were more shared similarities of core microbiome composition of the 3 treatment groups vs no_med group in inflammed tissues compared to non-inflamed tissues. We can also see that the 3 distinct treatment groups show low level of variability in core microbiome composition. They all seem to have similar percentages of differing microbiome composition. This could suggest that the treatments are relatively less effective overall. 
 
 ## G7: No Medication vs Corticosteroids Only vs Mesalamine Only vs Corticosteroids + Mesalamine — Noninflamed
 
 <img src="https://raw.githubusercontent.com/kgagno01/MICB475_Team8/8ca4808bb23f141210a92e682571ef843fdb0531/Project_2/Figures/venn_G7_noninflamed.png" alt="Venn G7 Noninflamed" width="900" />
+Interestingly, we can see that non-inflamed tissues that were treated with corticosteroids only had a more variable core microbiome composition comapred to the other groups (51% difference). This could suggest that corticosteroids create a larger disturbance in a non-inflamed microbiome.
 
 # Aim 4
 
