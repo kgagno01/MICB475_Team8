@@ -406,3 +406,70 @@ ggsave("venn_G5_noninflamed.png", G5_noninf_venn)
 ```
 <img src="../Figures/venn_G5_inflamed.png" alt="G5 Inflamed Venn" width="600">
 <img src="../Figures/venn_G5_noninflamed.png" alt="G5 Noninflamed Venn" width="600">
+
+# G6: Corticosteroids only vs No medication ####
+
+## Core ASVs at 70% prevalence (for taxonomy/bar plots)
+## Note: C_inf_ASVs, C_noninf_ASVs, No_inf_ASVs, No_noninf_ASVs already computed above
+```r
+prune_taxa(C_inf_ASVs,    ryan_RA) %>% tax_table()
+prune_taxa(No_inf_ASVs,   ryan_RA) %>% tax_table()
+prune_taxa(C_noninf_ASVs, ryan_RA) %>% tax_table()
+prune_taxa(No_noninf_ASVs, ryan_RA) %>% tax_table()
+```
+## Plot relative abundance
+```r
+plot_core(prune_taxa(C_inf_ASVs,    C_inflamed),    "G6: Corticosteroids - Inflamed")
+plot_core(prune_taxa(No_inf_ASVs,   No_inflamed),   "G6: No Meds - Inflamed")
+plot_core(prune_taxa(C_noninf_ASVs, C_noninflamed), "G6: Corticosteroids - Noninflamed")
+plot_core(prune_taxa(No_noninf_ASVs, No_noninflamed), "G6: No Meds - Noninflamed")
+```
+## Venn diagrams
+```r
+G6_inf_list <- list(
+  Corticosteroids = core_members(C_inflamed,  detection = 0.001, prevalence = 0.10),
+  No_Meds         = core_members(No_inflamed, detection = 0.001, prevalence = 0.10)
+)
+G6_noninf_list <- list(
+  Corticosteroids = core_members(C_noninflamed,  detection = 0.001, prevalence = 0.10),
+  No_Meds         = core_members(No_noninflamed, detection = 0.001, prevalence = 0.10)
+)
+
+G6_inf_venn    <- ggVennDiagram(x = G6_inf_list)
+G6_noninf_venn <- ggVennDiagram(x = G6_noninf_list)
+
+ggsave("venn_G6_inflamed.png",    G6_inf_venn)
+ggsave("venn_G6_noninflamed.png", G6_noninf_venn)
+
+```
+# G7: No Medication vs C only vs M only vs C+M — Inflamed & Noninflamed ####
+
+## 4 way Venn diagram
+```r
+G7_inf_list <- list(
+  No_Meds         = core_members(No_inflamed,     detection = 0.001, prevalence = 0.10),
+  Corticosteroids = core_members(C_inflamed,      detection = 0.001, prevalence = 0.10),
+  Mesalamine      = core_members(M_inflamed,      detection = 0.001, prevalence = 0.10),
+  C_and_M         = core_members(C_M_inflamed,    detection = 0.001, prevalence = 0.10)
+)
+
+G7_noninf_list <- list(
+  No_Meds         = core_members(No_noninflamed,  detection = 0.001, prevalence = 0.10),
+  Corticosteroids = core_members(C_noninflamed,   detection = 0.001, prevalence = 0.10),
+  Mesalamine      = core_members(M_noninflamed,   detection = 0.001, prevalence = 0.10),
+  C_and_M         = core_members(C_M_noninflamed, detection = 0.001, prevalence = 0.10)
+)
+
+G7_inf_venn    <- ggVennDiagram(x = G7_inf_list) +
+  ggtitle("G7: No Meds vs C vs M vs C+M — Inflamed")
+
+G7_noninf_venn <- ggVennDiagram(x = G7_noninf_list) +
+  ggtitle("G7: No Meds vs C vs M vs C+M — Noninflamed")
+
+ggsave("venn_G7_inflamed.png",    G7_inf_venn,    width = 8, height = 7)
+ggsave("venn_G7_noninflamed.png", G7_noninf_venn, width = 8, height = 7)
+```
+
+
+
+
