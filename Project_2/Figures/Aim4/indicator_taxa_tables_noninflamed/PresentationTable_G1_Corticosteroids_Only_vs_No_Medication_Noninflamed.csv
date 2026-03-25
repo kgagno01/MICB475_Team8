@@ -1,0 +1,16 @@
+"Tissue","Comparison","Taxon","Family","Genus","AssociatedGroup","IndVal","p_value"
+"Noninflamed","G1 Corticosteroids Only vs No Medication","8ec05512c8c6b5c2af1f53fccd4c1ae8","Unclassified_Family","Unclassified_Genus","Cor_only",0.870781991169794,0.002
+"Noninflamed","G1 Corticosteroids Only vs No Medication","b228e20616a0a4c9165abf62df11eea5","Unclassified_Family","Unclassified_Genus","Cor_only",0.864021572609854,0.007
+"Noninflamed","G1 Corticosteroids Only vs No Medication","Family_XI (family-level)","Family_XI","Unclassified_Genus","Cor_only",0.644899630805702,0.007
+"Noninflamed","G1 Corticosteroids Only vs No Medication","Marinilabiliaceae (family-level)","Marinilabiliaceae","Unclassified_Genus","NoMeds",0.852889228971745,0.008
+"Noninflamed","G1 Corticosteroids Only vs No Medication","5de1d6cba226a6843caa04eb17639ae6","Unclassified_Family","Unclassified_Genus","Cor_only",0.8673930205171,0.01
+"Noninflamed","G1 Corticosteroids Only vs No Medication","Ruminococcus (genus-level)","Ruminococcaceae","Ruminococcus","Cor_only",0.631417663021888,0.018
+"Noninflamed","G1 Corticosteroids Only vs No Medication","Geofilum (genus-level)","Marinilabiliaceae","Geofilum","Cor_only",0.605702719416219,0.018
+"Noninflamed","G1 Corticosteroids Only vs No Medication","463ccc4044935acfa08235ade550557e","Unclassified_Family","Unclassified_Genus","Cor_only",0.534522483824849,0.018
+"Noninflamed","G1 Corticosteroids Only vs No Medication","e504385fbd83b4253f6a4a941a1e7007","Unclassified_Family","Unclassified_Genus","Cor_only",0.514199331936996,0.031
+"Noninflamed","G1 Corticosteroids Only vs No Medication","224d266b147588a000917723c0268775","Unclassified_Family","Unclassified_Genus","Cor_only",0.614212162238192,0.033
+"Noninflamed","G1 Corticosteroids Only vs No Medication","Anaerosphaera (genus-level)","Family_XI","Anaerosphaera","Cor_only",0.528736004613078,0.036
+"Noninflamed","G1 Corticosteroids Only vs No Medication","d2fe8c598bde9cc2b9d34a3f1e0303ca","Unclassified_Family","Unclassified_Genus","Cor_only",0.581132810984694,0.037
+"Noninflamed","G1 Corticosteroids Only vs No Medication","875f9ef9a121a3002ea097444690a20a","Unclassified_Family","Unclassified_Genus","Cor_only",0.523040595575979,0.042
+"Noninflamed","G1 Corticosteroids Only vs No Medication","Lachnospiraceae (family-level)","Lachnospiraceae","Unclassified_Genus","NoMeds",0.750132706249407,0.048
+"Noninflamed","G1 Corticosteroids Only vs No Medication","7862462431c2d710680a356852bbcafa","Unclassified_Family","Unclassified_Genus","Cor_only",0.530598298748078,0.049

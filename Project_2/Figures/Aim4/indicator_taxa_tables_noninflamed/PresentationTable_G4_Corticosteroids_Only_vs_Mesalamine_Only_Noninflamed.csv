@@ -1,0 +1,13 @@
+"Tissue","Comparison","Taxon","Family","Genus","AssociatedGroup","IndVal","p_value"
+"Noninflamed","G4 Corticosteroids Only vs Mesalamine Only","5de1d6cba226a6843caa04eb17639ae6","Unclassified_Family","Unclassified_Genus","Cor_only",0.848554523069036,0.007
+"Noninflamed","G4 Corticosteroids Only vs Mesalamine Only","Marinilabiliaceae (family-level)","Marinilabiliaceae","Unclassified_Genus","Mes_only",0.845267164039695,0.009
+"Noninflamed","G4 Corticosteroids Only vs Mesalamine Only","Family_XI (family-level)","Family_XI","Unclassified_Genus","Cor_only",0.654205079897337,0.012
+"Noninflamed","G4 Corticosteroids Only vs Mesalamine Only","Desulfobaculum (genus-level)","Desulfovibrionaceae","Desulfobaculum","Cor_only",0.631119993470078,0.019
+"Noninflamed","G4 Corticosteroids Only vs Mesalamine Only","35fd41579b5eec27ec14c400c586c480","Unclassified_Family","Unclassified_Genus","Cor_only",0.630832817666073,0.022
+"Noninflamed","G4 Corticosteroids Only vs Mesalamine Only","bbae6ed124f4d6b48435a964a95c8418","Unclassified_Family","Unclassified_Genus","Mes_only",0.818237350306688,0.025
+"Noninflamed","G4 Corticosteroids Only vs Mesalamine Only","8ec05512c8c6b5c2af1f53fccd4c1ae8","Unclassified_Family","Unclassified_Genus","Cor_only",0.831960757092081,0.033
+"Noninflamed","G4 Corticosteroids Only vs Mesalamine Only","Lachnospiraceae (family-level)","Lachnospiraceae","Unclassified_Genus","Mes_only",0.753092689417534,0.042
+"Noninflamed","G4 Corticosteroids Only vs Mesalamine Only","0eebf22536faa70d10968eb4972b2736","Unclassified_Family","Unclassified_Genus","Cor_only",0.534522483824849,0.047
+"Noninflamed","G4 Corticosteroids Only vs Mesalamine Only","Marinilabiliaceae (family-level)","Marinilabiliaceae","Unclassified_Genus","Mes_only",0.777300550358441,0.048
+"Noninflamed","G4 Corticosteroids Only vs Mesalamine Only","15ceb00ebfbfe7d69e79f08436f255f9","Unclassified_Family","Unclassified_Genus","Cor_only",0.524346367078477,0.048
+"Noninflamed","G4 Corticosteroids Only vs Mesalamine Only","Ruminococcus (genus-level)","Ruminococcaceae","Ruminococcus","Cor_only",0.593036882567066,0.049

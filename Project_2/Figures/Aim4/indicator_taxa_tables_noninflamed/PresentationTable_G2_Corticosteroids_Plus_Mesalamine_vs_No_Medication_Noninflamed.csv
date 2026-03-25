@@ -1,0 +1,7 @@
+"Tissue","Comparison","Taxon","Family","Genus","AssociatedGroup","IndVal","p_value"
+"Noninflamed","G2 Corticosteroids Plus Mesalamine vs No Medication","Lachnospiraceae (family-level)","Lachnospiraceae","Unclassified_Genus","Cor_Mes",0.781816392868554,0.011
+"Noninflamed","G2 Corticosteroids Plus Mesalamine vs No Medication","8ec05512c8c6b5c2af1f53fccd4c1ae8","Unclassified_Family","Unclassified_Genus","Cor_Mes",0.752252357995565,0.021
+"Noninflamed","G2 Corticosteroids Plus Mesalamine vs No Medication","Pseudoflavonifractor (genus-level)","Oscillospiraceae","Pseudoflavonifractor","Cor_Mes",0.60247306956487,0.03
+"Noninflamed","G2 Corticosteroids Plus Mesalamine vs No Medication","Family_XI (family-level)","Family_XI","Unclassified_Genus","Cor_Mes",0.536927047474567,0.032
+"Noninflamed","G2 Corticosteroids Plus Mesalamine vs No Medication","Desulfobaculum (genus-level)","Desulfovibrionaceae","Desulfobaculum","Cor_Mes",0.599238455210025,0.034
+"Noninflamed","G2 Corticosteroids Plus Mesalamine vs No Medication","Ruminococcaceae (family-level)","Ruminococcaceae","Unclassified_Genus","NoMeds",0.667436851605073,0.049

@@ -1,0 +1,9 @@
+"Tissue","Comparison","Taxon","Family","Genus","AssociatedGroup","IndVal","p_value"
+"Noninflamed","G3 Triple Therapy vs No Medication","Turicibacter (genus-level)","Erysipelotrichaceae","Turicibacter","NoMeds",0.980356888958585,0.011
+"Noninflamed","G3 Triple Therapy vs No Medication","Incertae_Sedis (genus-level)","Incertae_Sedis","Incertae_Sedis","NoMeds",0.875368024821011,0.012
+"Noninflamed","G3 Triple Therapy vs No Medication","Lachnospiraceae (family-level)","Lachnospiraceae","Unclassified_Genus","NoMeds",0.905514417563197,0.025
+"Noninflamed","G3 Triple Therapy vs No Medication","Parasporobacterium (genus-level)","Lachnospiraceae","Parasporobacterium","NoMeds",0.917860407041238,0.027
+"Noninflamed","G3 Triple Therapy vs No Medication","Asaccharospora (genus-level)","Peptostreptococcaceae","Asaccharospora","NoMeds",0.929714739462357,0.029
+"Noninflamed","G3 Triple Therapy vs No Medication","[Acetivibrio]_ethanolgignens_group (genus-level)","Lachnospiraceae","[Acetivibrio]_ethanolgignens_group","NoMeds",0.858708658326552,0.035
+"Noninflamed","G3 Triple Therapy vs No Medication","Murimonas (genus-level)","Lachnospiraceae","Murimonas","NoMeds",0.880927116887745,0.042
+"Noninflamed","G3 Triple Therapy vs No Medication","5de1d6cba226a6843caa04eb17639ae6","Unclassified_Family","Unclassified_Genus","NoMeds",0.887762878464316,0.045
