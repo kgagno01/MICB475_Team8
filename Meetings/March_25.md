@@ -58,3 +58,53 @@ may contribute to restoration of microbial balance
 Interestingly, Aim 5 showed depletion of dysbiosis-associated taxa (e.g., Sutterella, Geofilum) in medicated groups , supporting the idea that mesalamine: shifts the microbiome toward a health-associated state
 <img width="2400" height="1800" alt="G5_Mesalamine_Only_vs_No_Medication_boxplot" src="https://github.com/user-attachments/assets/4d6d1665-6ff1-4c81-a05b-77034d7ab379" />
 
+# Aim 6 Functional analysis using PICRUSt2
+## Inflamed tissues - Heatmap
+Generated after differential abundance analysis of all inflamed samples with medication of interest
+<img width="1800" height="1800" alt="Heatmap of differentially abundant KO pathways in medication groups of interest (inflamed)" src="https://github.com/kgagno01/MICB475_Team8/blob/1233ff51363fe033a8ef8b218c2b6832681b2a0f/Project_2/Figures/Aim%206/KEGG%20Heatmap%20Inflamed.png" />
+Questions:
+* How can we tell which group is which?
+* Is there a way to replace the KO pathway code by the name of the pathway?
+* Would it be better to focus on only two groups per heatmap?
+
+## Noninflamed tissues - Heatmap
+Generated after differential abundance analysis of all noninflamed samples with medication of interest
+<img width="1800" height="1800" alt="Heatmap of differentially abundant KO pathways in medication groups of interest (noninflamed)" src="https://github.com/kgagno01/MICB475_Team8/blob/1233ff51363fe033a8ef8b218c2b6832681b2a0f/Project_2/Figures/Aim%206/KEGG%20Heatmap%20Noninflamed.png" />
+Questions
+* Is it normal that there are way more pathways compared to the inflamed tissues?
+* Same questions as the ones for the inflamed tissues heatmap
+
+## Inflamed tissues - Error Bar
+Performed DAA using all noninflamed samples with medication of interest. However, when plotting error bar charts, the code only allows for two groups. I didn't know if it was better to filter the daa_results table multiple times to only keep two groups (method 2) or to redo the whole analysis using two groups at a time (method 1). So I did both.
+### Corticosteroids vs Mesalamine
+Method 1: Analysis gave more than 30 significant pathways so I only kept the ones with padj < 0.02 and log2FC > 3
+<img width="2000" height="1800" alt="PEB Method 1 Corticosteroids vs Mesalamine" src="https://github.com/kgagno01/MICB475_Team8/blob/1233ff51363fe033a8ef8b218c2b6832681b2a0f/Project_2/Figures/Aim%206/KEGG%20Error%20Bar%20Inflamed%20CvsM.png" />
+Method 2: 
+<img width="2000" height="1800" alt="PEB Method 2 Corticosteroids vs Mesalamine" src="https://github.com/kgagno01/MICB475_Team8/blob/1233ff51363fe033a8ef8b218c2b6832681b2a0f/Project_2/Figures/Aim%206/KEGG%20Error%20Bar%20Inflamed%20CvsM%20Method2.png" />
+Differences between the two:
+* More pathways were differentially abundant using method 1.
+* Adjusted p-values are lower with method 1.
+
+### Corticosteroids vs Mesalamine+corticosteroids
+Method 1: No significant pathway identified
+Method 2: Only 4 pathways identified
+<img width="1000" height="900" alt="PEB Method 2 Corticosteroids vs Mesalamine+corticosteroids" src="https://github.com/kgagno01/MICB475_Team8/blob/1233ff51363fe033a8ef8b218c2b6832681b2a0f/Project_2/Figures/Aim%206/KEGG%20Error%20Bar%20Inflamed%20CvsM%2BC%20Method2.png" />
+Note: I will change the formatting so it looks better.
+
+### Corticosteroids vs No medication
+Method 1: No significant pathway identified
+Method 2: 
+<img width="1000" height="900" alt="PEB Method 2 Corticosteroids vs No" src="https://github.com/kgagno01/MICB475_Team8/blob/1233ff51363fe033a8ef8b218c2b6832681b2a0f/Project_2/Figures/Aim%206/KEGG%20Error%20Bar%20Inflamed%20CvsNo%20Method2.png" />
+
+## Noninflamed tissues - Error bar
+### Corticosteroids vs Mesalamine
+Method 1: More than 30 pathways identified; only kept the ones with p_adjust < 0.02, log2FC > 4
+<img width="2000" height="1800" alt="PEB Method 1 Corticosteroids vs Mesalamine Noninflamed" src="https://github.com/kgagno01/MICB475_Team8/blob/1233ff51363fe033a8ef8b218c2b6832681b2a0f/Project_2/Figures/Aim%206/KEGG%20Error%20Bar%20Noninflamed%20CvsM%20Method1.png" />
+Method 2: Also had to filter to keep less than 30 pathways (same settings as method 1)
+<img width="2000" height="1800" alt="PEB Method 2 Corticosteroids vs Mesalamine Noninflamed" src="https://github.com/kgagno01/MICB475_Team8/blob/1233ff51363fe033a8ef8b218c2b6832681b2a0f/Project_2/Figures/Aim%206/KEGG%20Error%20Bar%20Noninflamed%20CvsM%20Method2.png" />
+
+### Corticosteroids vs Mesalamine+corticosteroids
+Method 1: Less than 30 pathways identified
+<img width="2000" height="1800" alt="PEB Method 1 Corticosteroids vs Mesalamine+corticosteroids Noninflamed" src="https://github.com/kgagno01/MICB475_Team8/blob/1233ff51363fe033a8ef8b218c2b6832681b2a0f/Project_2/Figures/Aim%206/KEGG%20Error%20Bar%20Noninflamed%20CvsM%2BC%20Method1.png" />
+Method 2: Had to filter to keep less than 30 pathways
+<img width="2000" height="1800" alt="PEB Method 2 Corticosteroids vs Mesalamine+corticosteroids Noninflamed" src="https://github.com/kgagno01/MICB475_Team8/blob/1233ff51363fe033a8ef8b218c2b6832681b2a0f/Project_2/Figures/Aim%206/KEGG%20Error%20Bar%20Noninflamed%20CvsM%2BC%20Method2.png" />
