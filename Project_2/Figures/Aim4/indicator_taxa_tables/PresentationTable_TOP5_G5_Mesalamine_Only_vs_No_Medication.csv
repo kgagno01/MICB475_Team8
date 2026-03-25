@@ -1,0 +1,6 @@
+"Comparison","Taxon","Family","Genus","AssociatedGroup","IndVal","p_value"
+"G5 Mesalamine Only vs No Medication","Lachnospiraceae (family-level)","Lachnospiraceae","Unclassified_Genus","Mes_only",0.619695746926045,0.002
+"G5 Mesalamine Only vs No Medication","Oscillospiraceae (family-level)","Oscillospiraceae","Unclassified_Genus","Mes_only",0.590729031217694,0.006
+"G5 Mesalamine Only vs No Medication","Turicibacter (genus-level)","Erysipelotrichaceae","Turicibacter","Mes_only",0.430331482911935,0.014
+"G5 Mesalamine Only vs No Medication","Lachnospiraceae (family-level)","Lachnospiraceae","Unclassified_Genus","NoMeds",0.454858826147342,0.017
+"G5 Mesalamine Only vs No Medication","Marinilabiliaceae (family-level)","Marinilabiliaceae","Unclassified_Genus","Mes_only",0.61111827447075,0.019

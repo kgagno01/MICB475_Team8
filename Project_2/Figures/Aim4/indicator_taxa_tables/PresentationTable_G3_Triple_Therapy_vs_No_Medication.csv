@@ -1,0 +1,14 @@
+"Comparison","Taxon","Family","Genus","AssociatedGroup","IndVal","p_value"
+"G3 Triple Therapy vs No Medication","[Acetivibrio]_ethanolgignens_group (genus-level)","Lachnospiraceae","[Acetivibrio]_ethanolgignens_group","NoMeds",0.972114796693506,0.001
+"G3 Triple Therapy vs No Medication","7862462431c2d710680a356852bbcafa","Unclassified_Family","Unclassified_Genus","NoMeds",0.927767562784163,0.003
+"G3 Triple Therapy vs No Medication","Lachnospiraceae (family-level)","Lachnospiraceae","Unclassified_Genus","NoMeds",0.902743129021523,0.005
+"G3 Triple Therapy vs No Medication","Lachnospiraceae (family-level)","Lachnospiraceae","Unclassified_Genus","NoMeds",0.80399541384604,0.006
+"G3 Triple Therapy vs No Medication","Lachnospiraceae (family-level)","Lachnospiraceae","Unclassified_Genus","NoMeds",0.784335935301524,0.014
+"G3 Triple Therapy vs No Medication","Lachnospiraceae (family-level)","Lachnospiraceae","Unclassified_Genus","NoMeds",0.7923958268936,0.019
+"G3 Triple Therapy vs No Medication","Lachnospiraceae (family-level)","Lachnospiraceae","Unclassified_Genus","NoMeds",0.882560142341946,0.022
+"G3 Triple Therapy vs No Medication","[Acetivibrio]_ethanolgignens_group (genus-level)","Lachnospiraceae","[Acetivibrio]_ethanolgignens_group","NoMeds",0.735560189089807,0.025
+"G3 Triple Therapy vs No Medication","Absiella (genus-level)","Erysipelotrichaceae","Absiella","NoMeds",0.752264978375291,0.028
+"G3 Triple Therapy vs No Medication","Incertae_Sedis (genus-level)","Incertae_Sedis","Incertae_Sedis","NoMeds",0.702764546750511,0.032
+"G3 Triple Therapy vs No Medication","Lachnospiraceae (family-level)","Lachnospiraceae","Unclassified_Genus","NoMeds",0.816512780975224,0.037
+"G3 Triple Therapy vs No Medication","Lachnospiraceae (family-level)","Lachnospiraceae","Unclassified_Genus","NoMeds",0.786545309651206,0.039
+"G3 Triple Therapy vs No Medication","Lonepinella (genus-level)","Pasteurellaceae","Lonepinella","NoMeds",0.729479173964093,0.04

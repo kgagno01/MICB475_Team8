@@ -1,0 +1,8 @@
+"Comparison","Taxon","Family","Genus","AssociatedGroup","IndVal","p_value"
+"G4 Corticosteroids Only vs Mesalamine Only","e504385fbd83b4253f6a4a941a1e7007","Unclassified_Family","Unclassified_Genus","Cor_only",0.612372435695794,0.005
+"G4 Corticosteroids Only vs Mesalamine Only","b228e20616a0a4c9165abf62df11eea5","Unclassified_Family","Unclassified_Genus","Cor_only",0.810635360169046,0.017
+"G4 Corticosteroids Only vs Mesalamine Only","Lachnospiraceae (family-level)","Lachnospiraceae","Unclassified_Genus","Cor_only",0.62576963619105,0.036
+"G4 Corticosteroids Only vs Mesalamine Only","875f9ef9a121a3002ea097444690a20a","Unclassified_Family","Unclassified_Genus","Cor_only",0.5,0.036
+"G4 Corticosteroids Only vs Mesalamine Only","Lachnospiraceae (family-level)","Lachnospiraceae","Unclassified_Genus","Cor_only",0.5,0.04
+"G4 Corticosteroids Only vs Mesalamine Only","Lachnospiraceae (family-level)","Lachnospiraceae","Unclassified_Genus","Mes_only",0.693888666488711,0.042
+"G4 Corticosteroids Only vs Mesalamine Only","Geofilum (genus-level)","Marinilabiliaceae","Geofilum","Cor_only",0.816620942306906,0.045

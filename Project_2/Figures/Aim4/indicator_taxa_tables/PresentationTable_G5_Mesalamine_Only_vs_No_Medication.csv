@@ -1,0 +1,14 @@
+"Comparison","Taxon","Family","Genus","AssociatedGroup","IndVal","p_value"
+"G5 Mesalamine Only vs No Medication","Lachnospiraceae (family-level)","Lachnospiraceae","Unclassified_Genus","Mes_only",0.619695746926045,0.002
+"G5 Mesalamine Only vs No Medication","Oscillospiraceae (family-level)","Oscillospiraceae","Unclassified_Genus","Mes_only",0.590729031217694,0.006
+"G5 Mesalamine Only vs No Medication","Turicibacter (genus-level)","Erysipelotrichaceae","Turicibacter","Mes_only",0.430331482911935,0.014
+"G5 Mesalamine Only vs No Medication","Lachnospiraceae (family-level)","Lachnospiraceae","Unclassified_Genus","NoMeds",0.454858826147342,0.017
+"G5 Mesalamine Only vs No Medication","Marinilabiliaceae (family-level)","Marinilabiliaceae","Unclassified_Genus","Mes_only",0.61111827447075,0.019
+"G5 Mesalamine Only vs No Medication","Rikenellaceae (family-level)","Rikenellaceae","Unclassified_Genus","Mes_only",0.663301830150189,0.02
+"G5 Mesalamine Only vs No Medication","44cae38ace30f54ee81cc5c5b2ce47eb","Unclassified_Family","Unclassified_Genus","Mes_only",0.46758257923562,0.025
+"G5 Mesalamine Only vs No Medication","3d48874183df65f00f253cf68234e2ca","Unclassified_Family","Unclassified_Genus","Mes_only",0.526979156863079,0.026
+"G5 Mesalamine Only vs No Medication","Sutterella (genus-level)","Sutterellaceae","Sutterella","NoMeds",0.636439264711235,0.029
+"G5 Mesalamine Only vs No Medication","Geofilum (genus-level)","Marinilabiliaceae","Geofilum","Mes_only",0.489869623812815,0.031
+"G5 Mesalamine Only vs No Medication","2c524905ff25d5599f17477ada457730","Unclassified_Family","Unclassified_Genus","Mes_only",0.515483427539331,0.044
+"G5 Mesalamine Only vs No Medication","Lachnospiraceae (family-level)","Lachnospiraceae","Unclassified_Genus","NoMeds",0.525000234308438,0.047
+"G5 Mesalamine Only vs No Medication","Lachnospiraceae (family-level)","Lachnospiraceae","Unclassified_Genus","NoMeds",0.435142941105225,0.049

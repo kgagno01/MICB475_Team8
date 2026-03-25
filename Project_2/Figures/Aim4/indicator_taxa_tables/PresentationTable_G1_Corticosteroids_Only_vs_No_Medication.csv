@@ -1,0 +1,8 @@
+"Comparison","Taxon","Family","Genus","AssociatedGroup","IndVal","p_value"
+"G1 Corticosteroids Only vs No Medication","Oscillospiraceae (family-level)","Oscillospiraceae","Unclassified_Genus","Cor_only",0.685537128879652,0.004
+"G1 Corticosteroids Only vs No Medication","Natronoflexus (genus-level)","Marinilabiliaceae","Natronoflexus","Cor_only",0.81289187076333,0.006
+"G1 Corticosteroids Only vs No Medication","Geofilum (genus-level)","Marinilabiliaceae","Geofilum","Cor_only",0.816675017387982,0.015
+"G1 Corticosteroids Only vs No Medication","Lachnospiraceae (family-level)","Lachnospiraceae","Unclassified_Genus","NoMeds",0.719194952228076,0.03
+"G1 Corticosteroids Only vs No Medication","1667bf727ec7f933a7e70d3c13396fc3","Unclassified_Family","Unclassified_Genus","Cor_only",0.492332087942223,0.035
+"G1 Corticosteroids Only vs No Medication","Sutterella (genus-level)","Sutterellaceae","Sutterella","NoMeds",0.719194952228076,0.04
+"G1 Corticosteroids Only vs No Medication","Geofilum (genus-level)","Marinilabiliaceae","Geofilum","Cor_only",0.57461043734325,0.046

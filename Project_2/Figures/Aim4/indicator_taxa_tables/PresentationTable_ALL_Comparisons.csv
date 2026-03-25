@@ -1,0 +1,51 @@
+"Comparison","Taxon","Family","Genus","AssociatedGroup","IndVal","p_value"
+"G1 Corticosteroids Only vs No Medication","Oscillospiraceae (family-level)","Oscillospiraceae","Unclassified_Genus","Cor_only",0.685537128879652,0.004
+"G1 Corticosteroids Only vs No Medication","Natronoflexus (genus-level)","Marinilabiliaceae","Natronoflexus","Cor_only",0.81289187076333,0.006
+"G1 Corticosteroids Only vs No Medication","Geofilum (genus-level)","Marinilabiliaceae","Geofilum","Cor_only",0.816675017387982,0.015
+"G1 Corticosteroids Only vs No Medication","Lachnospiraceae (family-level)","Lachnospiraceae","Unclassified_Genus","NoMeds",0.719194952228076,0.03
+"G1 Corticosteroids Only vs No Medication","1667bf727ec7f933a7e70d3c13396fc3","Unclassified_Family","Unclassified_Genus","Cor_only",0.492332087942223,0.035
+"G1 Corticosteroids Only vs No Medication","Sutterella (genus-level)","Sutterellaceae","Sutterella","NoMeds",0.719194952228076,0.04
+"G1 Corticosteroids Only vs No Medication","Geofilum (genus-level)","Marinilabiliaceae","Geofilum","Cor_only",0.57461043734325,0.046
+"G2 Corticosteroids Plus Mesalamine vs No Medication","e504385fbd83b4253f6a4a941a1e7007","Unclassified_Family","Unclassified_Genus","Cor_Mes",0.608047780549291,0.002
+"G2 Corticosteroids Plus Mesalamine vs No Medication","b1f914aca311f8af324b2eda493cda68","Unclassified_Family","Unclassified_Genus","Cor_Mes",0.723678866234583,0.006
+"G2 Corticosteroids Plus Mesalamine vs No Medication","Lachnospiraceae (family-level)","Lachnospiraceae","Unclassified_Genus","Cor_Mes",0.768486675299383,0.01
+"G2 Corticosteroids Plus Mesalamine vs No Medication","9ef169ac863ffa2f9c9a54904c26f605","Unclassified_Family","Unclassified_Genus","Cor_Mes",0.593150528270067,0.015
+"G2 Corticosteroids Plus Mesalamine vs No Medication","Oscillospiraceae (family-level)","Oscillospiraceae","Unclassified_Genus","Cor_Mes",0.561323236827037,0.019
+"G2 Corticosteroids Plus Mesalamine vs No Medication","Turicibacter (genus-level)","Erysipelotrichaceae","Turicibacter","Cor_Mes",0.462910049886276,0.027
+"G2 Corticosteroids Plus Mesalamine vs No Medication","Lachnospiraceae (family-level)","Lachnospiraceae","Unclassified_Genus","Cor_Mes",0.508788445805241,0.039
+"G2 Corticosteroids Plus Mesalamine vs No Medication","Lachnospiraceae (family-level)","Lachnospiraceae","Unclassified_Genus","NoMeds",0.66858807739825,0.04
+"G2 Corticosteroids Plus Mesalamine vs No Medication","Geofilum (genus-level)","Marinilabiliaceae","Geofilum","Cor_Mes",0.689957600402599,0.046
+"G2 Corticosteroids Plus Mesalamine vs No Medication","f1681bcc5274382eaf70ad85491c837e","Unclassified_Family","Unclassified_Genus","Cor_Mes",0.504421683002235,0.046
+"G3 Triple Therapy vs No Medication","[Acetivibrio]_ethanolgignens_group (genus-level)","Lachnospiraceae","[Acetivibrio]_ethanolgignens_group","NoMeds",0.972114796693506,0.001
+"G3 Triple Therapy vs No Medication","7862462431c2d710680a356852bbcafa","Unclassified_Family","Unclassified_Genus","NoMeds",0.927767562784163,0.003
+"G3 Triple Therapy vs No Medication","Lachnospiraceae (family-level)","Lachnospiraceae","Unclassified_Genus","NoMeds",0.902743129021523,0.005
+"G3 Triple Therapy vs No Medication","Lachnospiraceae (family-level)","Lachnospiraceae","Unclassified_Genus","NoMeds",0.80399541384604,0.006
+"G3 Triple Therapy vs No Medication","Lachnospiraceae (family-level)","Lachnospiraceae","Unclassified_Genus","NoMeds",0.784335935301524,0.014
+"G3 Triple Therapy vs No Medication","Lachnospiraceae (family-level)","Lachnospiraceae","Unclassified_Genus","NoMeds",0.7923958268936,0.019
+"G3 Triple Therapy vs No Medication","Lachnospiraceae (family-level)","Lachnospiraceae","Unclassified_Genus","NoMeds",0.882560142341946,0.022
+"G3 Triple Therapy vs No Medication","[Acetivibrio]_ethanolgignens_group (genus-level)","Lachnospiraceae","[Acetivibrio]_ethanolgignens_group","NoMeds",0.735560189089807,0.025
+"G3 Triple Therapy vs No Medication","Absiella (genus-level)","Erysipelotrichaceae","Absiella","NoMeds",0.752264978375291,0.028
+"G3 Triple Therapy vs No Medication","Incertae_Sedis (genus-level)","Incertae_Sedis","Incertae_Sedis","NoMeds",0.702764546750511,0.032
+"G3 Triple Therapy vs No Medication","Lachnospiraceae (family-level)","Lachnospiraceae","Unclassified_Genus","NoMeds",0.816512780975224,0.037
+"G3 Triple Therapy vs No Medication","Lachnospiraceae (family-level)","Lachnospiraceae","Unclassified_Genus","NoMeds",0.786545309651206,0.039
+"G3 Triple Therapy vs No Medication","Lonepinella (genus-level)","Pasteurellaceae","Lonepinella","NoMeds",0.729479173964093,0.04
+"G4 Corticosteroids Only vs Mesalamine Only","e504385fbd83b4253f6a4a941a1e7007","Unclassified_Family","Unclassified_Genus","Cor_only",0.612372435695794,0.005
+"G4 Corticosteroids Only vs Mesalamine Only","b228e20616a0a4c9165abf62df11eea5","Unclassified_Family","Unclassified_Genus","Cor_only",0.810635360169046,0.017
+"G4 Corticosteroids Only vs Mesalamine Only","Lachnospiraceae (family-level)","Lachnospiraceae","Unclassified_Genus","Cor_only",0.62576963619105,0.036
+"G4 Corticosteroids Only vs Mesalamine Only","875f9ef9a121a3002ea097444690a20a","Unclassified_Family","Unclassified_Genus","Cor_only",0.5,0.036
+"G4 Corticosteroids Only vs Mesalamine Only","Lachnospiraceae (family-level)","Lachnospiraceae","Unclassified_Genus","Cor_only",0.5,0.04
+"G4 Corticosteroids Only vs Mesalamine Only","Lachnospiraceae (family-level)","Lachnospiraceae","Unclassified_Genus","Mes_only",0.693888666488711,0.042
+"G4 Corticosteroids Only vs Mesalamine Only","Geofilum (genus-level)","Marinilabiliaceae","Geofilum","Cor_only",0.816620942306906,0.045
+"G5 Mesalamine Only vs No Medication","Lachnospiraceae (family-level)","Lachnospiraceae","Unclassified_Genus","Mes_only",0.619695746926045,0.002
+"G5 Mesalamine Only vs No Medication","Oscillospiraceae (family-level)","Oscillospiraceae","Unclassified_Genus","Mes_only",0.590729031217694,0.006
+"G5 Mesalamine Only vs No Medication","Turicibacter (genus-level)","Erysipelotrichaceae","Turicibacter","Mes_only",0.430331482911935,0.014
+"G5 Mesalamine Only vs No Medication","Lachnospiraceae (family-level)","Lachnospiraceae","Unclassified_Genus","NoMeds",0.454858826147342,0.017
+"G5 Mesalamine Only vs No Medication","Marinilabiliaceae (family-level)","Marinilabiliaceae","Unclassified_Genus","Mes_only",0.61111827447075,0.019
+"G5 Mesalamine Only vs No Medication","Rikenellaceae (family-level)","Rikenellaceae","Unclassified_Genus","Mes_only",0.663301830150189,0.02
+"G5 Mesalamine Only vs No Medication","44cae38ace30f54ee81cc5c5b2ce47eb","Unclassified_Family","Unclassified_Genus","Mes_only",0.46758257923562,0.025
+"G5 Mesalamine Only vs No Medication","3d48874183df65f00f253cf68234e2ca","Unclassified_Family","Unclassified_Genus","Mes_only",0.526979156863079,0.026
+"G5 Mesalamine Only vs No Medication","Sutterella (genus-level)","Sutterellaceae","Sutterella","NoMeds",0.636439264711235,0.029
+"G5 Mesalamine Only vs No Medication","Geofilum (genus-level)","Marinilabiliaceae","Geofilum","Mes_only",0.489869623812815,0.031
+"G5 Mesalamine Only vs No Medication","2c524905ff25d5599f17477ada457730","Unclassified_Family","Unclassified_Genus","Mes_only",0.515483427539331,0.044
+"G5 Mesalamine Only vs No Medication","Lachnospiraceae (family-level)","Lachnospiraceae","Unclassified_Genus","NoMeds",0.525000234308438,0.047
+"G5 Mesalamine Only vs No Medication","Lachnospiraceae (family-level)","Lachnospiraceae","Unclassified_Genus","NoMeds",0.435142941105225,0.049

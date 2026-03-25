@@ -1,0 +1,6 @@
+"Comparison","Taxon","Family","Genus","AssociatedGroup","IndVal","p_value"
+"G2 Corticosteroids Plus Mesalamine vs No Medication","e504385fbd83b4253f6a4a941a1e7007","Unclassified_Family","Unclassified_Genus","Cor_Mes",0.608047780549291,0.002
+"G2 Corticosteroids Plus Mesalamine vs No Medication","b1f914aca311f8af324b2eda493cda68","Unclassified_Family","Unclassified_Genus","Cor_Mes",0.723678866234583,0.006
+"G2 Corticosteroids Plus Mesalamine vs No Medication","Lachnospiraceae (family-level)","Lachnospiraceae","Unclassified_Genus","Cor_Mes",0.768486675299383,0.01
+"G2 Corticosteroids Plus Mesalamine vs No Medication","9ef169ac863ffa2f9c9a54904c26f605","Unclassified_Family","Unclassified_Genus","Cor_Mes",0.593150528270067,0.015
+"G2 Corticosteroids Plus Mesalamine vs No Medication","Oscillospiraceae (family-level)","Oscillospiraceae","Unclassified_Genus","Cor_Mes",0.561323236827037,0.019
