@@ -1,0 +1,392 @@
+#Picrust 2 analysis
+
+####Packages to install for analysis####
+# install.packages("devtools")
+# devtools::install_github("cafferychen777/ggpicrust2")
+# install.packages('MicrobiomeStat')
+# BiocManager::install("KEGGREST")
+# install.packages("GGally")
+# install.packages("ggpicrust2")
+# install.packages("pheatmap")
+
+library(tidyverse)
+library(phyloseq)
+library(ggpicrust2)
+library(ggplot2)
+library(ggprism)
+library(pheatmap)
+
+####Loading the phyloseq object, the KO file and extracting the metadata####
+load("ryan_phyloseq.RData")
+
+ko <- read.delim("pred_metagenome_unstrat.tsv", row.names = 1)
+
+meta <- ryan_phyloseq %>% .@sam_data %>% data.frame() %>% 
+  rownames_to_column('sample_name')
+
+inflamed <- meta %>% filter(Histological.status == "Inflamed tissue ")
+noninflamed <- meta %>% filter(Histological.status == "Noninflamed tissue ")
+
+####Filtering out the data to only keep the 5 medication groups of interest - INFLAMED####
+# Medication groups of interest:
+#   1. No
+#   2. Corticosteroid
+#   3. Mesalamine
+#   4. Corticosteroid + Mesalamine
+#   5. Corticosteroid + Mesalamine + Mercaptopurine
+
+#Filtering for medication groups of interest and inflamed tissues
+medication <- meta %>% filter(Medications %in% c("No", "Corticosteroids", "Mesalamine", "Mesalamine+corticosteroids", "Mesalamine+corticosteroids+mercaptopurine"))
+medication_inflamed <- medication %>% filter(Histological.status == "Inflamed tissue ")
+
+#Filtering KO file for medication groups of interest and inflamed tissue
+ko_filt_inf <-  ko %>% select(all_of(medication_inflamed$sample_name))
+
+####Differential abundance analysis - INFLAMED####
+# Perform pathway differential abundance analysis (DAA) using LinDA method
+# daa_results_df_ko_inf <- pathway_daa(abundance = ko_filt_inf,
+#                              metadata = medication_inflamed, 
+#                              group = "Medications", 
+#                              daa_method = "LinDA", 
+#                              select = NULL, reference = NULL)
+# 
+# # Annotate pathway results using KO to KEGG conversion
+# daa_annotated_results_df_ko_inf <- pathway_annotation(pathway = "KO",
+#                                               daa_results_df = daa_results_df_ko_inf,
+#                                               ko_to_kegg = TRUE)
+#saveRDS(daa_annotated_results_df_ko_inf,"daa_annotated_results_df_ko_inf.rds")
+
+daa_ko_inf <- readRDS("daa_annotated_results_df_ko_inf.rds")
+#Comparisons with significant difference according to the table
+# 1. Corticosteroids vs Mesalamine
+# 2. Corticosteroids vs Mesalamine+corticosteroids
+# 3. Corticosteroids vs No
+
+####Heatmap - INFLAMED####
+sig_features_ko_inf <- daa_ko_inf %>% 
+  pull('feature') %>% unique()
+
+ko_relab <- read.delim('pred_metagenome_unstrat.tsv',row.names = 1) %>% 
+  apply(2,function(x) x/sum(x)) %>% as.data.frame()
+colSums(ko_relab) # Should be all 1
+
+stats_ko_inf <- ko_relab %>% t() %>%  # switch rows and columns
+  as.data.frame() %>% # Lets us use select()
+  select(all_of(sig_features_ko_inf)) %>% 
+  cor(method = 'pearson') #Pearson tests between every feature pair
+
+# Define the color palette
+color_palette <- colorRampPalette(c("blue", "white", "red"))(40)
+
+# Define breaks for the color scale
+breaks <- seq(-1, 1, length.out = 41)  # 40 colors + 1 for the endpoint
+
+# Create the clustered heatmap with centered color at zero
+# install.packages("pheatmap")
+#library('pheatmap')
+pheatmap(stats_ko_inf, 
+         clustering_distance_rows = "euclidean",  
+         clustering_distance_cols = "euclidean", 
+         clustering_method = "complete",          
+         color = color_palette, 
+         breaks = breaks,
+         main = '',
+         fontsize_row = 10, 
+         fontsize_col = 10,
+         filename = "./KEGG Heatmap Inflamed.png",
+         height= 9, width = 9)
+
+####Pathway error bar plots - INFLAMED####
+source('ggpicrust2_errorbar_function_fixed.R')
+#Corticosteroids vs Mesalamine - Method 1 (redoing DAA)
+CvsM <- inflamed[inflamed$Medications %in% c("Corticosteroids","Mesalamine"), ]
+
+ko_inf_CvsM <-  ko %>% select(all_of(CvsM$sample_name))
+
+# #daa_results_df_ko_inf_CvsM <- pathway_daa(abundance = ko_inf_CvsM,
+#                              metadata = CvsM,
+#                              group = "Medications",
+#                              daa_method = "LinDA",
+#                              select = NULL, reference = NULL)
+# 
+# #daa_ko_inf_CvsM <- pathway_annotation(pathway = "KO",
+#                                               daa_results_df = daa_results_df_ko_inf_CvsM,
+#                                               ko_to_kegg = TRUE)
+
+#saveRDS(daa_ko_inf_CvsM,"daa_ko_inf_CvsM.rds")
+
+daa_ko_inf_CvsM <- readRDS("daa_ko_inf_CvsM.rds")
+
+daa_ko_inf_CvsM %>% filter(p_adjust < 0.02, abs(log2_fold_change) > 3) %>% nrow()
+#These settings yield 15 pathways.
+
+daa_ko_inf_CvsM_filt <- daa_ko_inf_CvsM %>% filter(p_adjust < 0.02, abs(log2_fold_change) > 3)
+
+peb_ko_inf_CvsM <- pathway_errorbar_fixed(abundance = ko_inf_CvsM, 
+                             daa_results_df = daa_ko_inf_CvsM_filt, 
+                             Group = CvsM$Medications, 
+                             wrap_label = FALSE, wraplength=30,
+                             fc_cutoff = 0, order_by_log = F,
+                             p_values_threshold = 0.02, 
+                             order = "pathway_class", 
+                             ko_to_kegg = FALSE, 
+                             p_value_bar = FALSE, 
+                             x_lab = "pathway_name")
+peb_ko_inf_CvsM
+
+ggsave("KEGG Error Bar Inflamed CvsM.png",
+       plot = peb_ko_inf_CvsM, width = 18, height = 10)
+
+#Corticosteroids vs Mesalamine - Method 2 (filtering out first DAA table)
+daa_ko_inf_CvsM_filt <- daa_ko_inf %>% filter(group2 == "Mesalamine")
+
+peb_ko_inf_CvsM_filt <- pathway_errorbar_fixed(abundance = ko_inf_CvsM, 
+                                            daa_results_df = daa_ko_inf_CvsM_filt, 
+                                            Group = CvsM$Medications, 
+                                            wrap_label = FALSE, wraplength=15,
+                                            fc_cutoff = 0, order_by_log = F,
+                                            p_values_threshold = 0.05, 
+                                            order = "pathway_class", 
+                                            ko_to_kegg = FALSE, 
+                                            p_value_bar = FALSE, 
+                                            x_lab = "pathway_name")
+
+ggsave("KEGG Error Bar Inflamed CvsM Method2.png",
+       plot = peb_ko_inf_CvsM_filt, width = 18, height = 10)
+
+#Corticosteroids vs Mesalamine+corticosteroids - Method 1
+CvsM_C <- inflamed[inflamed$Medications %in% c("Corticosteroids","Mesalamine+corticosteroids"), ]
+
+ko_inf_CvsM_C <-  ko %>% select(all_of(CvsM_C$sample_name))
+
+daa_results_df_ko_inf_CvsM_C <- pathway_daa(abundance = ko_inf_CvsM_C,
+                             metadata = CvsM_C,
+                             group = "Medications",
+                             daa_method = "LinDA",
+                             select = NULL, reference = NULL)
+
+daa_ko_inf_CvsM_C <- pathway_annotation(pathway = "KO",
+                                              daa_results_df = daa_results_df_ko_inf_CvsM_C,
+                                              ko_to_kegg = TRUE)
+
+#No significant pathways found using this method
+#saveRDS(daa_ko_inf_CvsM,"daa_ko_inf_CvsM.rds")
+
+#Corticosteroids vs Mesalamine+corticosteroids - Method 2
+daa_ko_inf_CvsM_C_filt <- daa_ko_inf %>% filter(group2 == "Mesalamine+corticosteroids")
+
+
+peb_ko_inf_CvsM_C_filt <- pathway_errorbar_fixed(abundance = ko_inf_CvsM_C, 
+                                          daa_results_df = daa_ko_inf_CvsM_C, 
+                                          Group = CvsM_C$Medications, 
+                                          wrap_label = FALSE, wraplength=30,
+                                          fc_cutoff = 0, order_by_log = F,
+                                          p_values_threshold = 0.05, 
+                                          order = "pathway_class", 
+                                          ko_to_kegg = FALSE, 
+                                          p_value_bar = FALSE, 
+                                          x_lab = "pathway_name")
+
+ggsave("KEGG Error Bar Inflamed CvsM+C Method2.png",
+       plot = peb_ko_inf_CvsM_C_filt, width = 18, height = 10)
+
+#Corticosteroids vs No - Method 1
+CvsNo <- inflamed[inflamed$Medications %in% c("Corticosteroids","No"), ]
+
+ko_inf_CvsNo <-  ko %>% select(all_of(CvsNo$sample_name))
+
+daa_results_df_ko_inf_CvsNo <- pathway_daa(abundance = ko_inf_CvsNo,
+                                            metadata = CvsNo,
+                                            group = "Medications",
+                                            daa_method = "LinDA",
+                                            select = NULL, reference = NULL)
+
+daa_ko_inf_CvsM_C <- pathway_annotation(pathway = "KO",
+                                        daa_results_df = daa_results_df_ko_inf_CvsM_C,
+                                        ko_to_kegg = TRUE)
+#No significant pathways found
+
+#Corticosteroids vs No - Method 2
+daa_ko_inf_CvsNo_filt <- daa_ko_inf %>% filter(group2 == "No")
+
+
+peb_ko_inf_CvsNo_filt <- pathway_errorbar_fixed(abundance = ko_inf_CvsNo, 
+                                                 daa_results_df = daa_ko_inf_CvsNo_filt, 
+                                                 Group = CvsNo$Medications, 
+                                                 wrap_label = FALSE, wraplength=30,
+                                                 fc_cutoff = 0, order_by_log = F,
+                                                 p_values_threshold = 0.05, 
+                                                 order = "pathway_class", 
+                                                 ko_to_kegg = FALSE, 
+                                                 p_value_bar = FALSE, 
+                                                 x_lab = "pathway_name")
+
+ggsave("KEGG Error Bar Inflamed CvsNo Method2.png",
+       plot = peb_ko_inf_CvsNo_filt, width = 18, height = 10)
+
+####Filtering out the data to only keep the 5 medication groups of interest - NONINFLAMED####
+# Medication groups of interest:
+#   1. No
+#   2. Corticosteroid
+#   3. Mesalamine
+#   4. Corticosteroid + Mesalamine
+#   5. Corticosteroid + Mesalamine + Mercaptopurine
+
+#Filtering for noninflamed tissues
+medication_noninflamed <- medication %>% filter(Histological.status == "Noninflamed tissue ")
+
+#Filtering KO file for medication groups of interest and noninflamed tissue
+ko_filt_noninf <-  ko %>% select(all_of(medication_noninflamed$sample_name))
+
+####Differential abundance analysis - INFLAMED####
+# Perform pathway differential abundance analysis (DAA) using LinDA method
+# daa_results_df_ko_noninf <- pathway_daa(abundance = ko_filt_noninf,
+#                              metadata = medication_noninflamed,
+#                              group = "Medications",
+#                              daa_method = "LinDA",
+#                              select = NULL, reference = NULL)
+# 
+# # Annotate pathway results using KO to KEGG conversion
+# daa_ko_noninf <- pathway_annotation(pathway = "KO",
+#                                               daa_results_df = daa_results_df_ko_noninf,
+#                                               ko_to_kegg = TRUE)
+# saveRDS(daa_ko_noninf,"daa_annotated_results_df_ko_noninf.rds")
+
+daa_ko_noninf <- readRDS("daa_annotated_results_df_ko_noninf.rds")
+
+####Heatmap - NONINFLAMED####
+sig_features_ko_noninf <- daa_ko_noninf %>% 
+  pull('feature') %>% unique()
+
+ko_relab <- read.delim('pred_metagenome_unstrat.tsv',row.names = 1) %>% 
+  apply(2,function(x) x/sum(x)) %>% as.data.frame()
+colSums(ko_relab) # Should be all 1
+
+stats_ko_noninf <- ko_relab %>% t() %>%  # switch rows and columns
+  as.data.frame() %>% # Lets us use select()
+  select(all_of(sig_features_ko_noninf)) %>% 
+  cor(method = 'pearson') #Pearson tests between every feature pair
+
+# Define the color palette
+color_palette <- colorRampPalette(c("blue", "white", "red"))(40)
+
+# Define breaks for the color scale
+breaks <- seq(-1, 1, length.out = 41)  # 40 colors + 1 for the endpoint
+
+# Create the clustered heatmap with centered color at zero
+# install.packages("pheatmap")
+#library('pheatmap')
+pheatmap(stats_ko_noninf, 
+         clustering_distance_rows = "euclidean",  
+         clustering_distance_cols = "euclidean", 
+         clustering_method = "complete",          
+         color = color_palette, 
+         breaks = breaks,
+         main = '',
+         fontsize_row = 10, 
+         fontsize_col = 10,
+         filename = "./KEGG Heatmap Noninflamed.png",
+         height= 20, width = 20)
+
+####Pathway Error Bar Plot - NONINFLAMED####
+#Corticosteroids vs Mesalamine - Method 1 (redoing DAA)
+CvsM_noninf <- noninflamed[noninflamed$Medications %in% c("Corticosteroids","Mesalamine"), ]
+
+ko_noninf_CvsM <-  ko %>% select(all_of(CvsM_noninf$sample_name))
+
+# daa_results_df_ko_noninf_CvsM <- pathway_daa(abundance = ko_noninf_CvsM,
+#                              metadata = CvsM_noninf,
+#                              group = "Medications",
+#                              daa_method = "LinDA",
+#                              select = NULL, reference = NULL)
+# 
+# daa_ko_noninf_CvsM <- pathway_annotation(pathway = "KO",
+#                                               daa_results_df = daa_results_df_ko_noninf_CvsM,
+#                                               ko_to_kegg = TRUE)
+
+saveRDS(daa_ko_noninf_CvsM,"daa_ko_noninf_CvsM.rds")
+
+daa_ko_noninf_CvsM %>% filter(p_adjust < 0.02, abs(log2_fold_change) > 4) %>% nrow()
+#These settings yield 28 pathways.
+
+daa_ko_noninf_CvsM_filt <- daa_ko_noninf_CvsM %>% filter(p_adjust < 0.02, abs(log2_fold_change) > 4)
+
+peb_ko_noninf_CvsM <- pathway_errorbar_fixed(abundance = ko_noninf_CvsM, 
+                                                daa_results_df = daa_ko_noninf_CvsM_filt,
+                                                Group = CvsM_noninf$Medications, 
+                                                wrap_label = FALSE, wraplength=30,
+                                                fc_cutoff = 0, order_by_log = F,
+                                                p_values_threshold = 0.05, 
+                                                order = "pathway_class", 
+                                                ko_to_kegg = FALSE, 
+                                                p_value_bar = FALSE, 
+                                                x_lab = "pathway_name")
+
+ggsave("KEGG Error Bar Noninflamed CvsM Method1.png",
+       plot = peb_ko_noninf_CvsM, width = 18, height = 10)
+
+#Corticosteroids vs Mesalamine - Method 2
+daa_ko_noninf_CvsM_filt <- daa_ko_noninf %>% filter(group2 == "Mesalamine", p_adjust < 0.02, abs(log2_fold_change) > 4)
+
+
+peb_ko_noninf_CvsM_filt <- pathway_errorbar_fixed(abundance = ko_noninf_CvsM, 
+                                                daa_results_df = daa_ko_noninf_CvsM_filt, 
+                                                Group = CvsM_noninf$Medications, 
+                                                wrap_label = FALSE, wraplength=30,
+                                                fc_cutoff = 0, order_by_log = F,
+                                                p_values_threshold = 0.05, 
+                                                order = "pathway_class", 
+                                                ko_to_kegg = FALSE, 
+                                                p_value_bar = FALSE, 
+                                                x_lab = "pathway_name")
+
+ggsave("KEGG Error Bar Noninflamed CvsM Method2.png",
+       plot = peb_ko_noninf_CvsM_filt, width = 18, height = 10)
+
+#Corticosteroids vs Mesalamine+Corticosteroids - Method 1
+CvsM_C_noninf <- noninflamed[noninflamed$Medications %in% c("Corticosteroids","Mesalamine+corticosteroids"), ]
+
+ko_noninf_CvsM_C <-  ko %>% select(all_of(CvsM_C_noninf$sample_name))
+
+# daa_results_df_ko_noninf_CvsM_C <- pathway_daa(abundance = ko_noninf_CvsM_C,
+#                              metadata = CvsM_C_noninf,
+#                              group = "Medications",
+#                              daa_method = "LinDA",
+#                              select = NULL, reference = NULL)
+ 
+daa_ko_noninf_CvsM_C <- pathway_annotation(pathway = "KO",
+                                              daa_results_df = daa_results_df_ko_noninf_CvsM_C,
+                                              ko_to_kegg = TRUE)
+
+saveRDS(daa_ko_noninf_CvsM_C,"daa_ko_noninf_CvsM_C.rds")
+
+peb_ko_noninf_CvsM_C <- pathway_errorbar_fixed(abundance = ko_noninf_CvsM_C, 
+                                             daa_results_df = daa_ko_noninf_CvsM_C,
+                                             Group = CvsM_C_noninf$Medications, 
+                                             wrap_label = FALSE, wraplength=30,
+                                             fc_cutoff = 0, order_by_log = F,
+                                             p_values_threshold = 0.05, 
+                                             order = "pathway_class", 
+                                             ko_to_kegg = FALSE, 
+                                             p_value_bar = FALSE, 
+                                             x_lab = "pathway_name")
+
+ggsave("KEGG Error Bar Noninflamed CvsM+C Method1.png",
+       plot = peb_ko_noninf_CvsM_C, width = 18, height = 10)
+
+#Corticosteroids vs Mesalamine+Corticosteroids - Method 2
+daa_ko_noninf_CvsM_C_filt <- daa_ko_noninf %>% filter(group2 == "Mesalamine+corticosteroids", p_adjust < 0.02, abs(log2_fold_change) > 4)
+
+peb_ko_noninf_CvsM_C_method2 <- pathway_errorbar_fixed(abundance = ko_noninf_CvsM_C, 
+                                                  daa_results_df = daa_ko_noninf_CvsM_C_filt, 
+                                                  Group = CvsM_C_noninf$Medications, 
+                                                  wrap_label = FALSE, wraplength=30,
+                                                  fc_cutoff = 0, order_by_log = F,
+                                                  p_values_threshold = 0.05, 
+                                                  order = "pathway_class", 
+                                                  ko_to_kegg = FALSE, 
+                                                  p_value_bar = FALSE, 
+                                                  x_lab = "pathway_name")
+
+ggsave("KEGG Error Bar Noninflamed CvsM+C Method2.png",
+       plot = peb_ko_noninf_CvsM_C_method2, width = 18, height = 10)
