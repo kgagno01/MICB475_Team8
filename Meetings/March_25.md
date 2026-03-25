@@ -18,6 +18,8 @@ There were more shared similarities of core microbiome composition of the 3 trea
 <img src="https://raw.githubusercontent.com/kgagno01/MICB475_Team8/8ca4808bb23f141210a92e682571ef843fdb0531/Project_2/Figures/venn_G7_noninflamed.png" alt="Venn G7 Noninflamed" width="900" />
 Interestingly, we can see that non-inflamed tissues that were treated with corticosteroids only had a more variable core microbiome composition comapred to the other groups (51% difference). This could suggest that corticosteroids create a larger disturbance in a non-inflamed microbiome.
 
+---
+
 # Aim 4
 
 G1: Corticosteroids vs No Medication
@@ -57,6 +59,32 @@ promotes stabilization of gut-associated taxa
 may contribute to restoration of microbial balance
 Interestingly, Aim 5 showed depletion of dysbiosis-associated taxa (e.g., Sutterella, Geofilum) in medicated groups , supporting the idea that mesalamine: shifts the microbiome toward a health-associated state
 <img width="2400" height="1800" alt="G5_Mesalamine_Only_vs_No_Medication_boxplot" src="https://github.com/user-attachments/assets/4d6d1665-6ff1-4c81-a05b-77034d7ab379" />
+
+---
+
+## Aim 5: DESeq2 Heatmap Analysis (Family Level)
+
+<img width="4800" height="3600" alt="Aim5_Final_Heatmap" src="https://github.com/user-attachments/assets/3bbd39ee-e9c9-4909-9ea2-86b4d51206a3" />
+
+### 1. Key Observations: Differential Abundance Trends
+* **Downregulated Taxa (Blue):** *Sutterellaceae* and *Marinilabiliaceae* (primarily **Inflamed** tissue across Cort, Mes, and Double Therapy).
+* **Upregulated Taxa (Red):** *Enterobacteriaceae* and *Bacillaceae* (specifically **Cort (N)** and **Cort vs Mes (N)**).
+* **Upregulated Taxa (Red):** *Oscillospiraceae* and *Ruminococcaceae* trends (**Double Therapy (N)** and **Mes (I)**).
+
+### 2. Microbial Roles in the Human Gut
+* **Sutterellaceae:** Mucus-adhering Proteobacteria; correlation with pro-inflammatory states in IBD.
+* **Enterobacteriaceae:** Facultative anaerobic pathobionts; opportunistic blooms during gut stress/oxygenation.
+* **Oscillospiraceae & Ruminococcaceae:** Strictly anaerobic fiber-degraders; primary producers of **butyrate** for barrier integrity.
+* **Lachnospiraceae:** Core commensal family; involved in carbohydrate fermentation and homeostasis.
+* **Marinilabiliaceae:** Anaerobic specialists; degradation of complex organic matter in stable environments.
+
+### 3. Preliminary Indications for Treatment
+* **Targeted Depletion:** Possible successful clearance of inflammatory-associated taxa in **Inflamed** sites.
+* **Potential Off-Target Effects:** Possible corticosteroid-induced shifts in histologically healthy (**Noninflamed**) tissue.
+* **Synergistic Recovery:** Tentative signal of Double Therapy supporting beneficial butyrate-producing commensals.
+* **Histology-Dependent Response:** Local tissue environment as a significant modulator of microbial drug response.
+
+---
 
 # Aim 6 Functional analysis using PICRUSt2
 ## Inflamed tissues - Heatmap
