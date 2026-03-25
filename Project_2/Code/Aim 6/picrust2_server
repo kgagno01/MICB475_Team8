@@ -1,0 +1,40 @@
+#PICRUSt2 workflow
+
+#Making a background session
+screen -S PICRUSt2
+
+#Export the data for picrust
+mkdir picrust
+
+qiime tools export \
+   --input-path Downloads/table-final.qza \
+   --output-path picrust
+
+qiime tools export \
+   --input-path Downloads/rep-seqs.qza \
+   --output-path picrust
+
+#Switch to picrust2 environment
+conda deactivate
+conda activate picrust2
+
+#Running PICRUSt2 analysis
+picrust2_pipeline.py \
+   -s picrust/dna-sequences.fasta \
+   -i picrust/feature-table.biom \
+   -o picrust_out
+
+#Switch to file with file of interest
+cd picrust_out
+
+cd pathways_out
+
+#Unzip file
+gunzip path_abun_unstrat.tsv.gz
+
+#Transfer file from server to personal computer
+scp root@10.19.139.191:/root/picrust_out/pathways_out/path_abun_unstrat.tsv .
+
+#Switching to qqime2
+conda deactivate
+conda activate qiime2-amplicon-2025.4
