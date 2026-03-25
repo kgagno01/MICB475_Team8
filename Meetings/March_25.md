@@ -62,23 +62,23 @@ Interestingly, Aim 5 showed depletion of dysbiosis-associated taxa (e.g., Sutter
 
 ---
 
-## Aim 5: DESeq2 Heatmap Analysis (Family Level)
+# Aim 5: DESeq2 Heatmap Analysis (Family Level)
 
 <img width="4800" height="3600" alt="Aim5_Final_Heatmap" src="https://github.com/user-attachments/assets/3bbd39ee-e9c9-4909-9ea2-86b4d51206a3" />
 
-### 1. Key Observations: Differential Abundance Trends
+## 1. Key Observations: Differential Abundance Trends
 * **Downregulated Taxa (Blue):** *Sutterellaceae* and *Marinilabiliaceae* (primarily **Inflamed** tissue across Cort, Mes, and Double Therapy).
 * **Upregulated Taxa (Red):** *Enterobacteriaceae* and *Bacillaceae* (specifically **Cort (N)** and **Cort vs Mes (N)**).
 * **Upregulated Taxa (Red):** *Oscillospiraceae* and *Ruminococcaceae* trends (**Double Therapy (N)** and **Mes (I)**).
 
-### 2. Microbial Roles in the Human Gut
+## 2. Microbial Roles in the Human Gut
 * **Sutterellaceae:** Mucus-adhering Proteobacteria; correlation with pro-inflammatory states in IBD.
 * **Enterobacteriaceae:** Facultative anaerobic pathobionts; opportunistic blooms during gut stress/oxygenation.
 * **Oscillospiraceae & Ruminococcaceae:** Strictly anaerobic fiber-degraders; primary producers of **butyrate** for barrier integrity.
 * **Lachnospiraceae:** Core commensal family; involved in carbohydrate fermentation and homeostasis.
 * **Marinilabiliaceae:** Anaerobic specialists; degradation of complex organic matter in stable environments.
 
-### 3. Preliminary Indications for Treatment
+## 3. Preliminary Indications for Treatment
 * **Targeted Depletion:** Possible successful clearance of inflammatory-associated taxa in **Inflamed** sites.
 * **Potential Off-Target Effects:** Possible corticosteroid-induced shifts in histologically healthy (**Noninflamed**) tissue.
 * **Synergistic Recovery:** Tentative signal of Double Therapy supporting beneficial butyrate-producing commensals.
