@@ -33,3 +33,17 @@ Corticosteroid-treated patients have different compositional and functional comp
 ![4-Way Venn Diagram - Inflamed](https://github.com/kgagno01/MICB475_Team8/blob/3eaa4f6637d4ce61cc40ccfa8885acddd75cf51a/Project_2/Figures/G7_4%20way%20venn_Inflammed_edited.png?raw=true)
 ## non-inflamed
 ![4-Way Venn Diagram - Non-Inflamed](https://github.com/kgagno01/MICB475_Team8/blob/18421233b82dddc929ddf55af562ae6279f2bf38/Project_2/Figures/G7_noninflamed_4%20way%20venn_edited.png?raw=true)
+
+---
+
+## Aim 5 DESeq Heatmap
+<img width="1934" height="1645" alt="Aim5 Final Heatmap" src="https://github.com/user-attachments/assets/59bbf82c-5441-49bb-a70a-bc133e292ea2" />
+* Heat map shows a clear IBD dysbiosis pattern across treatment groups
+* Corticosteroid groups show larger and more pronounced shifts than mesalamine groups
+* Enriched in corticosteroid related comparisons: Enterobacteriaceae, Bacillaceae, Family_XI
+* Depleted in corticosteroid related comparisons: Lachnospiraceae, Ruminococcaceae, Oscillospiraceae, Barnesiellaceae, Sutterellaceae, Marinilabiliaceae
+* Strongest dysbiosis signal: Enterobacteriaceae enrichment
+* Strongest beneficial loss signal: Lachnospiraceae depletion
+* Mesalamine groups appear relatively less disrupted
+* Inflammation status remains a major driver of taxonomic differences
+* Overall: steroid associated microbiota look more perturbed than mesalamine associated microbiota
