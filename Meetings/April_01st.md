@@ -28,3 +28,5 @@ Corticosteroid-treated patients have different compositional and functional comp
   * Collect similar samples from the same IBD patients over time to see the short- and long-term effects of the pharmacological treatment on the gut microbiome.
  
 ## Edits of figures presented last week
+
+![4-Way Venn Diagram - Inflamed](https://github.com/kgagno01/MICB475_Team8/blob/3eaa4f6637d4ce61cc40ccfa8885acddd75cf51a/Project_2/Figures/G7_4%20way%20venn_Inflammed_edited.png?raw=true)
