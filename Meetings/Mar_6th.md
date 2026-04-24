@@ -104,5 +104,98 @@ Figure 14: Unifrac Distance (beta diversity) PCoA plot, distribution of taxa pre
 <img width="1500" height="1200" alt="plot_pcoa_wunifrac_ninf" src="https://github.com/user-attachments/assets/1230c152-a267-402d-96cf-2d2d7812dfb9" />
 Figure 15: Weighted Unifrac Distance (beta diversity), PCoA plot, distribution of the taxa abundance using the phylogenetic tree between medication groups in inflamed samples. No medication groups present.
 
+## Meeting Summary
+### Manuscript & Proposal Notes
 
+- Addition of 4 marks
+- **Title suggestion:** Can make it broad — e.g., *"Microbiome Differences..."*
+- Do not add anything not included in supervisor comments
+- Question on aim: Does **not** need to be addressed in proposal revision, but **must** be addressed in the manuscript
+- Will bin together all biopsy sites
+
+---
+
+## Results Summary
+
+### Alpha Diversity
+
+- Separately analyzed inflamed and non-inflamed tissues by medication group
+- Statistical differences observed in alpha diversity overall
+- **No difference** in Shannon and Faith PD for both inflamed and non-inflamed tissues
+
+**Feedback:**
+- Suggest decreasing alpha values
+
+---
+
+### Beta Diversity
+
+**Inflamed Tissues:**
+- Difference between medication groups showed statistical significance in p-values
+- Smaller clusters observed in **Mercaptopurine** group
+- Overall p-value for medication groups: **~0.04**
+- Note: p-values for **individual** medication groups not yet calculated
+
+**Feedback on Code:**
+- Use **R Markdown** so that code is easy to follow and read
+- Workflow to re-run:
+  1. First filter out healthy individuals
+  2. Separate inflamed and non-inflamed
+  3. Re-run the analysis code
+
+---
+
+## Updated Results After Code Fix
+
+### Alpha Diversity (Post-fix)
+- **No difference** observed for inflamed tissues
+
+### Beta Diversity (Post-fix)
+- **No difference** observed across all three matrices
+
+**Still pending:**
+- [ ] Check non-inflamed results for alpha diversity
+- [ ] Check non-inflamed results for beta diversity
+
+---
+
+## Aim 1 Discussion
+
+- Only looking at **single drug** uses for Aim 1
+- Steps:
+  1. First compare alpha and beta diversity between **combined drug groups** to see if they are similar to each other
+  2. If similar, proceed to Aim 3
+- Differentiate between **no treatment** and **Anti-TNF** drugs
+  - So far only seeing differences in **inflamed tissues**
+- Option to **combine similar groups** and remove groups that are not similar
+- Two categories proposed:
+  - **Single treatment**
+  - **Combined treatment**
+- No prominent relationship observed between **biopsy site vs. medication**
+  - Other factors may be influencing results
+- If no significant difference found within no-medication group → consider **merging combined groups**
+
+---
+
+## Aim 2 Discussion
+
+- Determine similarities and differences when analyzing combined drug groups
+- **Case 1 example:** If there are 5 single medication groups and all 5 are different from:
+  - No treatment group
+  - Combined treatment group
+  → Then can proceed accordingly
+
+---
+
+## Action Items
+
+### Next Meeting
+- [ ] Confirm comparison groups to be used for **Aim 3 and Aim 4**
+- [ ] Check non-inflamed alpha and beta diversity results
+- [ ] Re-run code using R Markdown format after filtering healthy individuals
+
+---
+
+## Notes
+> Biopsy sites will be binned together for all analyses
 
