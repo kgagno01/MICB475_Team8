@@ -33,4 +33,68 @@ This project utilizes the Ryan Dataset to analyze the spatial and pharmaceutical
 | **PICRUSt2** | Keryanne | Aim 6: Determine the functional composition and metabolic pathway enrichment of microbial communities in IBD patients across medication groups. | 
 
 ## Action item deadlines: 
-TBD during meeting
+## Meeting summary
+### General Notes
+- Next meeting: **Friday, March 6th**
+- Complete **Aim 1 and Aim 2** by next week
+
+---
+
+## Aim 1
+
+**Objective:** Determine if biopsy sites/tissue groups need to be
+binned together or kept separate
+
+- Evelyn needs to complete Aim 1 first before proceeding
+- Decision based on **p-value** results:
+  - If groups are similar → bin together
+  - If groups are different → keep separate
+- Make **phyloseq object** for analysis
+
+**Statistical Tests:**
+- Inflamed vs. Non-inflamed comparisons → **Wilcoxon test**
+- 3 or more group comparisons → **Kruskal-Wallis test**
+
+---
+
+## Aim 2
+
+- Complete by next week alongside Aim 1
+
+---
+
+## Aim 3
+
+**Objective:** Compare medication use across tissue types using
+Venn diagrams
+
+- **Venn Diagram 1:** Inflamed tissues — comparing across medication groups
+- **Venn Diagram 2:** Non-inflamed tissues — comparing across medication groups
+
+---
+
+## Metadata & Grouping Strategy
+
+- **Categories of interest:** Medication groups
+- Challenge: Different medications may act very differently,
+making grouping difficult
+- **Approach:**
+  1. First look at each medication **individually**
+  2. Identify if one medication stands out from another
+  3. Then determine if grouping is appropriate
+
+---
+
+## Action Items Summary
+
+| Task | Owner | Deadline |
+|---|---|---|
+| Complete Aim 1 (bin vs. separate analysis) | Evelyn | Next week |
+| Make phyloseq object | Evelyn | Next week |
+| Complete Aim 2 | Team | Next week |
+| Prepare Venn diagrams for Aim 3 | Team | TBD |
+
+---
+
+## Next Meeting
+> **Friday, March 6th**
