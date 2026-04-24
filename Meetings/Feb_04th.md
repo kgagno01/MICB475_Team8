@@ -56,7 +56,7 @@ Meetings take place on Wednesdays, from 12pm to 12:45pm.
       * Maybe focusing solely on HIV infected individuals yield different results?
     * Unsure whether healthy individuals are included as a control in the dataset
 
- ### Minutes from meeting
+ ### Meeting Summary
 * Notes on datasets
   * Datasets sourced by YunYun are not suitable for project 2.
   * The IBD Ryan dataset will be used.
